@@ -1,0 +1,7 @@
+
+.performance-wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-rows: min-content auto;
+    gap: var(--padding);
+}

@@ -1,0 +1,37 @@
+
+.row-grid {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100%;
+
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-template-columns: minmax(min-content, max-content); */
+    /* grid-auto-flow: dense; */
+    gap: 1.5rem;
+
+    padding-right: 1.5rem;
+}
+
+.row-grid > .box {
+    min-width: 0;
+}
+
+.row-grid > .box > pre,
+.row-grid > .box > code {
+    background-color: #f8f8f8;
+}
+
+.row-grid > .box > table, 
+.row-grid > .box > table > thead > tr > th,
+.row-grid > .box > table > tbody > tr > td,
+.row-grid > .box > table > tr > th,
+.row-grid > .box > table > tr > td,
+.row-grid > .box > table {
+    border: 1px solid #ced4da;
+    padding: 0.5rem;
+}
+
+.row-grid > .box > :last-child {
+    margin-bottom: 0;
+}

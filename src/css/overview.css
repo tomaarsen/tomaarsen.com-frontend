@@ -1,0 +1,20 @@
+.overview-wrapper {
+    height: 100%;
+    overflow: auto;
+    align-items: stretch;
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fill, 18rem);
+    /* grid-template-columns: repeat(auto-fit, 45rem); */
+    grid-gap: var(--padding);
+}
+
+.repo-card {
+    border: 1px solid #ced4da;
+    height: 100%;
+}
+
+.repo-card > .card-body {
+    display: grid;
+    grid-template-rows: auto min-content;
+}

@@ -6,7 +6,7 @@ import "../../../css/try.css";
 
 import Row from "./TryRow";
 
-import postData from "../../../js/utils.js";
+import { postJson } from "../../../js/utils.js";
 
 class Try extends React.Component {
     constructor() {
@@ -51,7 +51,7 @@ class Try extends React.Component {
 
     postGo() {
         this.startLoading();
-        postData("/api/try/go", {
+        postJson("/api/try/go", {
             'pos': this.state.pos,
             'wordform': this.state.wordform,
             'word': this.state.word,
@@ -68,7 +68,7 @@ class Try extends React.Component {
 
     postModules() {
         this.startLoading();
-        postData("/api/try/modules", {
+        postJson("/api/try/modules", {
             'pos': this.state.pos,
             'wordform': this.state.wordform,
             'show_competitors': this.state.showCompetitors,
@@ -90,7 +90,7 @@ class Try extends React.Component {
     postRandom() {
         // Somtimes it doesn't seem to know the known correct?
         this.startLoading();
-        postData("/api/try/random", {
+        postJson("/api/try/random", {
             'show_competitors': this.state.showCompetitors,
         }).then(response => {
             this.setState({
@@ -175,8 +175,8 @@ class Try extends React.Component {
 
         return (
             <div className="box">
-                <div className="container mw-100">
-                    <div className="spinner-border spinner-border-sm" style={{ position: "absolute", right: "calc(var(--padding) * 2)", opacity: this.state.loading ? 1 : 0 }} />
+                <div className="container mw-100" style={{position: "relative"}}>
+                    <div className="spinner-border spinner-border-sm" style={{ position: "absolute", right: "1.75rem", opacity: this.state.loading ? 1 : 0 }} />
                     <form id="inflex_form" className="row needs-validation" method="post" noValidate onSubmit={this.handleSubmit}>
                         <div className="col-auto">
                             <label htmlFor="pos" className="form-label">Part of Speech</label>

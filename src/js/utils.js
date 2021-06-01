@@ -1,6 +1,6 @@
 
 // Example POST method implementation:
-async function postData(url = '', data = {}) {
+async function postJson(url = '', data = {}) {
     // Default options are marked with *
     const response = await fetch(url, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -18,4 +18,4 @@ async function postData(url = '', data = {}) {
     return response.json(); // parses JSON response into native JavaScript objects
 }
 
-export default postData
+export default postJson;

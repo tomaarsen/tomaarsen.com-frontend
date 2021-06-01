@@ -9,7 +9,7 @@ const OverviewCard = ({ name, description, fork, language, stargazers_count, for
         <div className="repo-card card">
                 <div className="card-header">
                     <h5>{name}</h5>
-                    <em className="text-muted" style={{ float: "right", fontSize: ".75em"}}>{fork ? "Forked" : "Original Work"}</em>
+                    <em className="text-muted" style={{ float: "right", fontSize: ".75em"}}>{fork ? "Contributed to" : "Original Work"}</em>
                 </div>
             
                 <div className="card-body">

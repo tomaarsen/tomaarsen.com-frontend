@@ -1,0 +1,63 @@
+
+.about-grid {
+    display: grid;
+    
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 'about skills skills skills'
+                        'about languages tools work';
+
+    gap: 1.5rem;
+    /* text-align: center; */
+    height: 100%;
+    overflow-y: auto;
+}
+
+@media only screen and (max-width: 1300px) {
+    
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 'about skills'
+                            'about languages'
+                            'about tools'
+                            'about work';
+        /* Padding for the scrollbar: */
+        padding-right: 1rem; 
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 'about' 
+                             'skills'
+                             'languages'
+                             'tools'
+                             'work';
+        /* Padding for the scrollbar: */
+        padding-right: 1rem; 
+    }
+}
+
+.about-grid > .about {
+    grid-area: about;
+}
+
+.about-grid > .skills {
+    grid-area: skills;
+}
+
+.about-grid > .languages {
+    grid-area: languages;
+}
+
+.about-grid > .tools {
+    grid-area: tools;
+}
+
+.about-grid > .work {
+    grid-area: work;
+}

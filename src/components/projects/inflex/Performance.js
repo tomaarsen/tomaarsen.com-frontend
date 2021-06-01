@@ -10,7 +10,7 @@ import "../../../css/chart.css";
 
 import Chart from "./PerformanceChart";
 
-import postData from "../../../js/utils.js";
+import { postJson } from "../../../js/utils.js";
 
 class Performance extends React.Component {
     constructor() {
@@ -41,7 +41,7 @@ class Performance extends React.Component {
 
     postPerformance() {
         this.startLoading();
-        postData("/api/performance", {
+        postJson("/api/performance", {
             'pos': this.state.pos,
             'wordform': this.state.wordform,
             'source': this.state.source,
@@ -161,8 +161,8 @@ class Performance extends React.Component {
 
         return (
             <div className="performance-wrapper" style={{ overflow: "hidden" }}>
-                <div className="box">
-                    <div className="spinner-border" style={{ position: "absolute", right: "calc(var(--padding) * 2)", opacity: this.state.loading ? 1 : 0 }} />
+                <div className="box" style={{position: "relative"}}>
+                    <div className="spinner-border" style={{ position: "absolute", right: "1.5rem", opacity: this.state.loading ? 1 : 0 }} />
                     <form id="inflex_form" className="row needs-validation" method="post" noValidate>
                         <div className="col-auto">
                             <label htmlFor="pos" className="form-label">Part of Speech</label>

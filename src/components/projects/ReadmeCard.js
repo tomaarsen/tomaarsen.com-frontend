@@ -54,11 +54,11 @@ const ReadmeCard = ({ name, description, fork, language, stargazers_count, forks
     }
 
     return (
-        <div className="card">
+        <div className="readme-card card">
             <Link to={{ pathname: html_url }} target="_blank" className="card-header" style={{ textDecoration: "none" }}>
                 <div>
                     <h5>{name}</h5>
-                    <em className="text-muted" style={{ float: "right", fontSize: ".75em" }}>{fork ? "Forked" : "Original Work"}</em>
+                    <em className="text-muted" style={{ float: "right", fontSize: ".75em" }}>{fork ? "Contributed to" : "Original Work"}</em>
                 </div>
             </Link>
 

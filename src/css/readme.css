@@ -1,4 +1,8 @@
 
+.readme-card {
+    border: 1px solid #ced4da;
+}
+
 .row-grid {
     overflow-y: auto;
     overflow-x: hidden;

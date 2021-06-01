@@ -24,14 +24,12 @@ class Sidebar extends React.Component {
 
                     <div className="accordion-item">
                         <h2 className="accordion-header collapsed" id="projects-header">
-                            <button className="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#projects-collapse" aria-expanded="true" aria-controls="projects-collapse">
+                            <button className="accordion-button" type="button" aria-expanded="true">
                                 Projects
                         </button>
                         </h2>
 
-                        <div id="projects-collapse" className="accordion-collapse collapse show" aria-labelledby="projects-header"
-                            data-bs-parent="#sidebar">
+                        <div id="projects-collapse" className="accordion-collapse collapse show" aria-labelledby="projects-header">
                             <div className="accordion-body p-0">
                                 <ul className="list-group list-group-flush ps-1">
                                     {/* All projects (cards) */}
@@ -49,6 +47,8 @@ class Sidebar extends React.Component {
                                                 {/* <li><a href="try" className="link-dark rounded">Try</a></li> */}
                                                 {/* <li><a href="performance" className="link-dark rounded">Performance</a></li> */}
                                                 <li><NavLink className="dark" exact to="/projects/inflex">Description</NavLink></li>
+                                                {/* <li><NavLink className="dark" exact to="/projects/inflex/paper">Paper</NavLink></li> */}
+                                                <li><a href="/api/inflex/paper" target="_blank" rel="noopener noreferrer" className="link-dark rounded">Paper</a></li>
                                                 <li><NavLink className="dark" exact to="/projects/inflex/try">Try</NavLink></li>
                                                 <li><NavLink className="dark" exact to="/projects/inflex/performance">Performance</NavLink></li>
                                             </ul>
@@ -79,38 +79,6 @@ class Sidebar extends React.Component {
                                         })}
                                 </ul>
                             </div>
-                        </div>
-                    </div>
-
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="skills-header">
-                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#skills-collapse" aria-expanded="false" aria-controls="skills-collapse">
-                                Skills
-                        </button>
-                        </h2>
-                        <div id="skills-collapse" className="accordion-collapse collapse" aria-labelledby="skills-header"
-                            data-bs-parent="#sidebar">
-                            <div className="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                            body. Let's imagine this being filled with some actual content.</div>
-                        </div>
-                    </div>
-
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="about-header">
-                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#about-collapse" aria-expanded="false" aria-controls="about-collapse">
-                                About
-                        </button>
-                        </h2>
-                        <div id="about-collapse" className="accordion-collapse collapse" aria-labelledby="about-header"
-                            data-bs-parent="#sidebar">
-                            <div className="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
                         </div>
                     </div>
                 </div>

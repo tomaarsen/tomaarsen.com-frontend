@@ -5,10 +5,13 @@ import {
 } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
+
 import Try from "./projects/inflex/Try";
 import Performance from "./projects/inflex/Performance";
 import Readme from "./projects/Readme";
 import Projects from "./projects/Overview";
+
+import AboutPage from "./about/AboutPage";
 
 import "../css/App.css";
 
@@ -30,12 +33,12 @@ class Main extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <div className="wrapper">
+                <div className="layout">
                     <Header />
                     <Sidebar repos={this.state.repos} />
                     <div className="content h-100" style={{ overflow: "hidden" }}>
                         <Route exact path="/projects">
-                            <Projects repos={this.state.repos}/>
+                            <Projects repos={this.state.repos} />
                         </Route>
                         <Route exact path="/projects/inflex/try" component={Try} />
                         <Route exact path="/projects/inflex/performance" component={Performance} />
@@ -46,7 +49,9 @@ class Main extends React.Component {
                                 </Route>
                             )
                         })}
+                        <Route exact path="/about" component={AboutPage} />
                     </div>
+                    {/* <About /> */}
                 </div>
             </BrowserRouter>
         );

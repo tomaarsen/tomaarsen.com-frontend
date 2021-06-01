@@ -18,4 +18,4 @@ async function postJson(url = '', data = {}) {
     return response.json(); // parses JSON response into native JavaScript objects
 }
 
-export default postJson;
+export { postJson };

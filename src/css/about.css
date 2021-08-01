@@ -2,43 +2,51 @@
 .about-grid {
     display: grid;
     
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 1fr;
-    grid-template-areas: 'about skills skills skills'
-                        'about languages tools work';
+    grid-template-columns: repeat(3, 23.5rem);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 'about languages recommended';
 
     gap: 1.5rem;
     /* text-align: center; */
     height: 100%;
+    /* width: 75%; */
     overflow-y: auto;
+    align-items: baseline;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1520px) {
     
     .about-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-areas: 'about skills'
-                            'about languages'
-                            'about tools'
-                            'about work';
+        grid-template-columns: repeat(2, 23.5rem);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 'about languages'
+                            'about recommended';
         /* Padding for the scrollbar: */
         padding-right: 1rem; 
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1140px) {
+    
+    .about-grid {
+        grid-template-columns: 23.5rem;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 'about' 
+                             'recommended'
+                             'languages';
+        /* Padding for the scrollbar: */
+        padding-right: 1rem; 
+    }
+}
+
+@media only screen and (max-width: 740px) {
     
     .about-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: repeat(3, auto);
         grid-template-areas: 'about' 
-                             'skills'
-                             'languages'
-                             'tools'
-                             'work';
-        /* Padding for the scrollbar: */
-        padding-right: 1rem; 
+                             'recommended'
+                             'languages';
     }
 }
 
@@ -52,6 +60,14 @@
 
 .about-grid > .languages {
     grid-area: languages;
+}
+
+.about-grid > .links {
+    grid-area: links;
+}
+
+.about-grid > .recommended {
+    grid-area: recommended;
 }
 
 .about-grid > .tools {

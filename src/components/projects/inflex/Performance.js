@@ -194,6 +194,9 @@ class Performance extends React.Component {
                             <select className="form-select" name="data_source" id="data_source" value={this.state.source} onChange={this.handleSource} required>
                                 <option value="celex">CELEX</option>
                                 <option value="celex_word">CELEX (Words only)</option>
+                                <option value="celex_word_new">CELEX (Words only, New)</option>
+                                <option value="celex_word_lemma_new">CELEX (Words only, Lemma, New)</option>
+                                <option value="celex_word_modified">CELEX (Words only, Modified)</option>
                                 <option value="celex_collocation">CELEX (Collocations only)</option>
                                 <option value="agid">AGID</option>
                                 <option value="wiktionary">Wiktionary</option>

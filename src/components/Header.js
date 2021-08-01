@@ -6,7 +6,11 @@ class Header extends React.Component {
         return (
             <div className="header box">
                 <div className="header-flex w-100">
-                    <code style={{flexGrow: 1, color: "#212529"}}>Tom Aarsen</code>
+                    <code style={{flexGrow: 1, color: "#212529"}}>
+                        <NavLink className="dark" exact to="/home">
+                        Tom Aarsen
+                        </NavLink>
+                    </code>
                     
                     <code>
                         <NavLink className="dark" exact to="/projects">
@@ -14,7 +18,7 @@ class Header extends React.Component {
                         </NavLink>
                     </code>
                     <code>
-                        <NavLink className="dark" exact to="/about">
+                        <NavLink className="dark" exact to="/home">
                         .about()
                         </NavLink>
                     </code>
@@ -24,8 +28,12 @@ class Header extends React.Component {
                         </a>
                     </code>
                     <code>
-
-                        .contact()
+                        <a className="dark" href="https://www.linkedin.com/in/tomaarsen" target="_blank" rel="noopener noreferrer">
+                        .linkedin()
+                        </a>
+                    </code>
+                    <code>
+                        .email()
                     </code>
                 </div>
             </div>

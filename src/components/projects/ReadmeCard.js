@@ -53,9 +53,15 @@ const ReadmeCard = ({ name, description, fork, language, stargazers_count, forks
                 return rtf.format(Math.round(elapsed / units[u]), u);
     }
 
+    // Hardcode linking to the parent repository for NLTK
+    if (name === "nltk"){
+        html_url = html_url.replace("tomaarsen", "nltk");
+    }
+
     return (
         <div className="readme-card card">
-            <Link to={{ pathname: html_url }} target="_blank" className="card-header" style={{ textDecoration: "none" }}>
+
+            <Link to={{ pathname: html_url }} target="_blank" className="card-header no-bottom-line">
                 <div>
                     <h5>{name}</h5>
                     <em className="text-muted" style={{ float: "right", fontSize: ".75em" }}>{fork ? "Contributed to" : "Original Work"}</em>

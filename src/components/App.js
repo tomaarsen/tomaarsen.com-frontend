@@ -1,10 +1,12 @@
 import React from "react";
 import {
     Route,
-    BrowserRouter
+    BrowserRouter,
+    Redirect
 } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
+import NotFound from "./NotFound";
 
 import Try from "./projects/inflex/Try";
 import Performance from "./projects/inflex/Performance";
@@ -28,15 +30,22 @@ class Main extends React.Component {
         fetch("https://api.github.com/users/tomaarsen/repos")
             .then(r => r.json())
             .then(r => this.setState({ repos: r }))
+        
+        // fetch("api/inflex/paper")
+        //     .then()
     }
 
     render() {
         return (
             <BrowserRouter>
+                <Route exact path="/projects/inflex/paper" />
                 <div className="layout">
                     <Header />
                     <Sidebar repos={this.state.repos} />
                     <div className="content h-100" style={{ overflow: "hidden" }}>
+                        <Route exact path="/">
+                            <Redirect to="/home" />
+                        </Route>
                         <Route exact path="/projects">
                             <Projects repos={this.state.repos} />
                         </Route>
@@ -49,7 +58,9 @@ class Main extends React.Component {
                                 </Route>
                             )
                         })}
-                        <Route exact path="/about" component={AboutPage} />
+                        <Route exact path="/home" component={AboutPage} />
+                        {/* Catch all route */}
+                        {/* <Route path="*" component={NotFound} /> */}
                     </div>
                     {/* <About /> */}
                 </div>

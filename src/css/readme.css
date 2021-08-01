@@ -17,6 +17,13 @@
     padding-right: 1.5rem;
 }
 
+@media only screen and (max-width: 740px) {
+
+    .row-grid {
+        padding-right: 0;
+    }
+}
+
 .row-grid > .box {
     min-width: 0;
 }

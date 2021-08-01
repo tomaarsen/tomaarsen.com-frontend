@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import "../../css/about.css";
 
@@ -24,118 +25,56 @@ class About extends React.Component {
             <div className="about-grid">
                 <div className="about d-grid" style={{gap: "1.5rem"}}>
                     <div className="box">
-                        <h4>About</h4>
+                        <h5>About</h5>
                         <hr />
-                        <ul>
+                        {/* <ul>
                             <li><i>Tom Aarsen</i></li>
                             <li><i>Age</i></li>
                             <li><i>Country</i></li>
-                        </ul>
-                    </div>
-
-                    <div className="box">
-                        <h5>Education</h5>
+                        </ul> */}
+                        {/* Hello. I'm Tom Aarsen, a {moment().diff('1999-12-02', 'years')} year old Programming enthusiast */}
+                        Hello.<br /><br />
+                        I'm Tom Aarsen - a Master student of the Data Science specialisation in Computing Science, based in the Netherlands. 
+                        I'm a Python enthusiast, with an interest in <a className="no-bottom-line" href="https://en.wikipedia.org/wiki/Natural_language_processing" target="_blank" rel="noreferrer">NLP</a> and open sourced projects.
                         <hr />
-                        <ul>
-                            <li><i>Education 1...</i></li>
-                            <li><i>Education 2...</i></li>
-                            <li><i>Education 3...</i></li>
-                        </ul>
+                        I'm the author of <NavLink className="no-bottom-line" exact to="/projects/inflex">Inflex</NavLink>,
+                        and I'm a member of the team behind <a className="no-bottom-line" href="https://github.com/nltk/nltk" target="_blank" rel="noreferrer">NLTK</a>, a well-known NLP Python library boasting over 10k stars on GitHub.<br />
+                        <hr />
+                        I've also developed well over a dozen Twitch.tv bots, which now run in countless chats. Beyond that, I've completed over half a dozen projects on a freelance basis over the years.
                     </div>
 
                     <div className="box">
                         <h5>Links</h5>
                         <hr />
-                        <ul>
-                            <li><i>Email Link</i></li>
-                            <li><i>GitHub Link</i></li>
-                            <li><i>LinkedIn Link</i></li>
+                        Contact me through one of the links below:
+                        <ul style={{paddingTop: "10px"}}>
+                            <li>
+                                <i>Email Link</i>
+                            </li>
+                            <li>
+                                <a className="no-bottom-line" href="https://www.github.com/tomaarsen" target="_blank" rel="noopener noreferrer">
+                                    My GitHub (tomaarsen).
+                                </a>
+                            </li>
+                            <li>
+                                <a className="no-bottom-line" href="https://www.linkedin.com/in/tomaarsen" target="_blank" rel="noopener noreferrer">
+                                    My LinkedIn (tomaarsen).
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
 
-                {/* <div className="box card">
-                    <h4>Skills</h4>
-                    <hr />
-                    <i>Primarily Python, bla bla, <br />I like programming, bla bla</i>
-                    <div className="h-100" style={{display: "grid", gridTemplateColumns: "1fr 1fr 1fr", paddingTop: "0.75rem"}}>
-                        <div style={{borderTop: "1px solid #ced4da", borderRight: "1px solid #ced4da"}}>
-                            <div style={{paddingTop: "0.75rem", paddingRight: "0.75rem"}}>
-                                <h5>Languages</h5>
-                                <ul>
-                                    <li><i>Language 1...</i></li>
-                                    <li><i>Language 2...</i></li>
-                                    <li><i>Language 3...</i></li>
-                                    <li><i>Language 4...</i></li>
-                                    <li><i>Language 5...</i></li>
-                                    <li><i>Language 6...</i></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div style={{borderTop: "1px solid #ced4da", borderRight: "1px solid #ced4da"}}>
-                            <div style={{paddingTop: "0.75rem", paddingRight: "0.75rem"}}>
-                                <h5>Tools</h5>
-                                <ul>
-                                    <li><i>Tool 1...</i></li>
-                                    <li><i>Tool 2...</i></li>
-                                    <li><i>Tool 3...</i></li>
-                                    <li><i>Tool 4...</i></li>
-                                    <li><i>Tool 5...</i></li>
-                                    <li><i>Tool 6...</i></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div style={{borderTop: "1px solid #ced4da"}}>
-                            <div style={{paddingTop: "0.75rem", paddingRight: "0.75rem"}}>
-                                <h5>Work</h5>
-                                <ul>
-                                    <li><i>Work 1...</i></li>
-                                    <li><i>Work 2...</i></li>
-                                    <li><i>Work 3...</i></li>
-                                    <li><i>Work 4...</i></li>
-                                    <li><i>Work 5...</i></li>
-                                    <li><i>Work 6...</i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-
-                <div className="box skills">
-                    <h4>Skills</h4>
-                    <hr />
-                    <i>Primarily Python, bla bla, <br />I like programming, bla bla</i>
-                </div>
-
                 <div className="box languages">
-                    <h5>Languages</h5>
+                    <h5>Languages I'm familiar with</h5>
                     {/* <div className="text-muted">A non-complete of languages which I have used over the years.</div> */}
                     <hr />
-                    {/* <ul>
-                        <li><i>Language 1...</i></li>
-                        <li><i>Language 2...</i></li>
-                        <li><i>Language 3...</i></li>
-                        <li><i>Language 4...</i></li>
-                        <li><i>Language 5...</i></li>
-                        <li><i>Language 6...</i></li>
-                    </ul> */}
-                    {/* <table style={{width: "100%"}}>
-                        <tbody>
-                            <DotsRow name="Python" nStars="5" />
-                            <DotsRow name="HTML" nStars="5" />
-                            <DotsRow name="JavaScript" nStars="4" />
-                            <DotsRow name="CSS" nStars="5" />
-                            <DotsRow name="Java" nStars="3" />
-                        </tbody>
-                    </table> */}
                     <ul>
                         {/* Main */}
                         <li>Python</li>
                         {/* Web */}
                         <li>HTML</li>
-                        <li>JavaScript</li>
+                        <li>JavaScript (incl. jQuery, React)</li>
                         <li>PHP</li>
                         <li>CSS</li>
                         {/* C-likes */}
@@ -151,13 +90,15 @@ class About extends React.Component {
                         {/* Query Language */}
                         <li>SQL</li>
                         {/* Formatting */}
-                        <li>Markdown</li>
                         <li>LaTeX</li>
                         <li>RST</li>
+                        <li>Markdown</li>
                         {/* Proof */}
                         <li>Coq</li>
                         
                         <li>Assembly</li>
+                        
+                        <li><div className="text-muted">and more...</div></li>
                     </ul>
                     {/* 
                     Python: 
@@ -188,32 +129,51 @@ class About extends React.Component {
                     {/* XML, JSON, */}
                 </div>
 
-                <div className="box tools">
-                    <h5>Tools</h5>
+                <div className="recommended box">
+                    <h5>Recommended pages on this site</h5>
                     <hr />
                     <ul>
-                        {/* "Skills" */}
-
-                        {/* MongoDB, SQLite, git, React, Linux, Windows, Scrum */}
-                        <li><i>Tool 1...</i></li>
-                        <li><i>Tool 2...</i></li>
-                        <li><i>Tool 3...</i></li>
-                        <li><i>Tool 4...</i></li>
-                        <li><i>Tool 5...</i></li>
-                        <li><i>Tool 6...</i></li>
+                        <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/inflex">
+                                What is Inflex?
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/inflex/try">
+                                Try out Inflex.
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/inflex/performance">
+                                Compare Inflex to competitors.
+                            </NavLink>
+                        </li>
                     </ul>
-                </div>
-
-                <div className="box work">
-                    <h5>Work</h5>
                     <hr />
                     <ul>
-                        <li><i>Work 1...</i></li>
-                        <li><i>Work 2...</i></li>
-                        <li><i>Work 3...</i></li>
-                        <li><i>Work 4...</i></li>
-                        <li><i>Work 5...</i></li>
-                        <li><i>Work 6...</i></li>
+                        <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/nltk">
+                                Natural Language Toolkit. (NLTK)
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/TTSTextNormalization">
+                                Convert from written expressions to spoken form.
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/TheNounProjectAPI">
+                                Access the Noun Project icons and photos API.
+                            </NavLink>
+                        </li>
+                    </ul>
+                    <hr />
+                    <ul>
+                        <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/TwitchMarkovChain">
+                                Try a Twitch chat bot that generates messages based on information it learns dynamically.
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>

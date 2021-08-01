@@ -9,14 +9,14 @@ class Sidebar extends React.Component {
 
         let sortedRepos = this.props.repos.sort((a, b) => {
             if (a.fork && !b.fork) {
-                return 1;
+                return -1;
             }
             if (!a.fork && b.fork) {
-                return -1;
+                return 1;
             }
             return b.size - a.size;
         })
-        .filter(repo => !repo.fork);
+        .filter(repo => !repo.fork || repo.name === "nltk");
 
         return (
             <div className="sidebar box">
@@ -26,7 +26,7 @@ class Sidebar extends React.Component {
                         <h2 className="accordion-header collapsed" id="projects-header">
                             <button className="accordion-button" type="button" aria-expanded="true">
                                 Projects
-                        </button>
+                            </button>
                         </h2>
 
                         <div id="projects-collapse" className="accordion-collapse collapse show" aria-labelledby="projects-header">
@@ -48,7 +48,8 @@ class Sidebar extends React.Component {
                                                 {/* <li><a href="performance" className="link-dark rounded">Performance</a></li> */}
                                                 <li><NavLink className="dark" exact to="/projects/inflex">Description</NavLink></li>
                                                 {/* <li><NavLink className="dark" exact to="/projects/inflex/paper">Paper</NavLink></li> */}
-                                                <li><a href="/api/inflex/paper" target="_blank" rel="noopener noreferrer" className="link-dark rounded">Paper</a></li>
+                                                <li><a href="/projects/inflex/paper/inflex_v2.0.pdf" target="_blank" rel="noopener noreferrer" className="link-dark rounded">Paper</a></li>
+                                                {/* <li><NavLink className="dark" exact to="/projects/inflex/paper">Paper</NavLink></li> */}
                                                 <li><NavLink className="dark" exact to="/projects/inflex/try">Try</NavLink></li>
                                                 <li><NavLink className="dark" exact to="/projects/inflex/performance">Performance</NavLink></li>
                                             </ul>

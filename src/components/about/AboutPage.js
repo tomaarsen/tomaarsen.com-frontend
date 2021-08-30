@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import "../../css/about.css";
 
+/*
 class DotsRow extends React.Component {
     render() {
         const dots = [...Array(5).keys()].map(i => <img src={i < this.props.nStars ? "dot_filled.svg" : "dot_empty.svg"} alt="Dot" key={i}/>);
@@ -18,6 +19,7 @@ class DotsRow extends React.Component {
         )
     }
 }
+*/
 
 class About extends React.Component {
     render() {

@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
-import NotFound from "./NotFound";
+// import NotFound from "./NotFound";
 
 import Try from "./projects/inflex/Try";
 import Performance from "./projects/inflex/Performance";

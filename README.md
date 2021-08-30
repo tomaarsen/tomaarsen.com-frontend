@@ -5,6 +5,6 @@ Relies on the API from [tomaarsen.com-backend](https://github.com/tomaarsen/toma
 
 ---
 
-Can be ran for development using `npm start`
+Can be ran for development using `npm start`.
 
 This frontend is deployed in production using nginx.

@@ -32,6 +32,11 @@ class Header extends React.Component {
                         .linkedin()
                         </a>
                     </code>
+                    <code>
+                        <a className="dark" href="https://github.com/tomaarsen/tomaarsen.com-frontend" target="_blank" rel="noopener noreferrer">
+                            v{process.env.REACT_APP_VERSION}
+                        </a>
+                    </code>
                     {/* <code>
                         .email()
                     </code> */}

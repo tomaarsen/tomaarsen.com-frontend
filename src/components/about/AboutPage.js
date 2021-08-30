@@ -37,10 +37,10 @@ class About extends React.Component {
                         {/* Hello. I'm Tom Aarsen, a {moment().diff('1999-12-02', 'years')} year old Programming enthusiast */}
                         Hello.<br /><br />
                         I'm Tom Aarsen - a Master student of the Data Science specialisation in Computing Science, based in the Netherlands. 
-                        I'm a Python enthusiast, with an interest in <a className="no-bottom-line" href="https://en.wikipedia.org/wiki/Natural_language_processing" target="_blank" rel="noreferrer">NLP</a> and open sourced projects.
+                        I'm a Python enthusiast, with an interest in <a className="no-bottom-line" href="https://en.wikipedia.org/wiki/Natural_language_processing">NLP</a> and open sourced projects.
                         <hr />
                         I'm the author of <NavLink className="no-bottom-line" exact to="/projects/inflex">Inflex</NavLink>,
-                        and I'm a member of the team behind <a className="no-bottom-line" href="https://github.com/nltk/nltk" target="_blank" rel="noreferrer">NLTK</a>, a well-known NLP Python library boasting over 10k stars on GitHub.<br />
+                        and I'm a member of the team behind <a className="no-bottom-line" href="https://github.com/nltk/nltk">NLTK</a>, a well-known NLP Python library boasting over 10k stars on GitHub.<br />
                         <hr />
                         I've also developed well over a dozen Twitch.tv bots, which now run in countless chats. Beyond that, I've completed over half a dozen projects on a freelance basis over the years.
                     </div>
@@ -54,13 +54,13 @@ class About extends React.Component {
                                 <i>Email Link</i>
                             </li> */}
                             <li>
-                                <a className="no-bottom-line" href="https://www.github.com/tomaarsen" target="_blank" rel="noopener noreferrer">
-                                    My GitHub (tomaarsen).
+                                <a className="no-bottom-line" href="https://www.github.com/tomaarsen">
+                                    My GitHub.
                                 </a>
                             </li>
                             <li>
-                                <a className="no-bottom-line" href="https://www.linkedin.com/in/tomaarsen" target="_blank" rel="noopener noreferrer">
-                                    My LinkedIn (tomaarsen).
+                                <a className="no-bottom-line" href="https://www.linkedin.com/in/tomaarsen">
+                                    My LinkedIn.
                                 </a>
                             </li>
                         </ul>

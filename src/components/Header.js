@@ -23,17 +23,17 @@ class Header extends React.Component {
                         </NavLink>
                     </code>
                     <code>
-                        <a className="dark" href="https://www.github.com/tomaarsen" target="_blank" rel="noopener noreferrer">
+                        <a className="dark" href="https://www.github.com/tomaarsen">
                         .github()
                         </a>
                     </code>
                     <code>
-                        <a className="dark" href="https://www.linkedin.com/in/tomaarsen" target="_blank" rel="noopener noreferrer">
+                        <a className="dark" href="https://www.linkedin.com/in/tomaarsen">
                         .linkedin()
                         </a>
                     </code>
                     <code>
-                        <a className="dark" href="https://github.com/tomaarsen/tomaarsen.com-frontend" target="_blank" rel="noopener noreferrer">
+                        <a className="dark" href="https://github.com/tomaarsen/tomaarsen.com-frontend">
                             v{process.env.REACT_APP_VERSION}
                         </a>
                     </code>

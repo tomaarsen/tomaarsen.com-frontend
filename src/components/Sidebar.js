@@ -48,7 +48,7 @@ class Sidebar extends React.Component {
                                                 {/* <li><a href="performance" className="link-dark rounded">Performance</a></li> */}
                                                 <li><NavLink className="dark" exact to="/projects/inflex">Description</NavLink></li>
                                                 {/* <li><NavLink className="dark" exact to="/projects/inflex/paper">Paper</NavLink></li> */}
-                                                <li><a href="/projects/inflex/paper/inflex_v2.0.pdf" target="_blank" rel="noopener noreferrer" className="link-dark rounded">Paper</a></li>
+                                                <li><a href="/projects/inflex/paper/inflex_v2.0.pdf" className="link-dark rounded">Paper</a></li>
                                                 {/* <li><NavLink className="dark" exact to="/projects/inflex/paper">Paper</NavLink></li> */}
                                                 <li><NavLink className="dark" exact to="/projects/inflex/try">Try</NavLink></li>
                                                 <li><NavLink className="dark" exact to="/projects/inflex/performance">Performance</NavLink></li>

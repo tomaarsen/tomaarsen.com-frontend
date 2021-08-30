@@ -14,7 +14,7 @@
     align-items: baseline;
 }
 
-@media only screen and (max-width: 1520px) {
+@media only screen and (max-width: 95rem) {
     
     .about-grid {
         grid-template-columns: repeat(2, 23.5rem);
@@ -26,7 +26,7 @@
     }
 }
 
-@media only screen and (max-width: 1140px) {
+@media only screen and (max-width: 72rem) {
     
     .about-grid {
         grid-template-columns: 23.5rem;
@@ -39,7 +39,7 @@
     }
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 47rem) {
     
     .about-grid {
         grid-template-columns: 1fr;
@@ -47,6 +47,8 @@
         grid-template-areas: 'about' 
                              'recommended'
                              'languages';
+        /* Remove padding for the scrollbar: */
+        padding-right: 0rem; 
     }
 }
 

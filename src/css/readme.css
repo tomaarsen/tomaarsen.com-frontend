@@ -17,8 +17,7 @@
     padding-right: 1.5rem;
 }
 
-@media only screen and (max-width: 740px) {
-
+@media only screen and (max-width: 47rem) {
     .row-grid {
         padding-right: 0;
     }

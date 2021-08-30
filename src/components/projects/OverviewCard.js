@@ -20,8 +20,8 @@ const OverviewCard = ({ name, description, fork, language, stargazers_count, for
                         <li className="list-group-item"><img src="fork.svg" alt="Forks" />{forks_count}</li>
                     </ul>
                 </div>
-        </div>
-            </Link>
+            </div>
+        </Link>
     )
 }
 

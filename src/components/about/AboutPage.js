@@ -50,9 +50,9 @@ class About extends React.Component {
                         <hr />
                         Contact me through one of the links below:
                         <ul style={{paddingTop: "10px"}}>
-                            <li>
+                            {/* <li>
                                 <i>Email Link</i>
-                            </li>
+                            </li> */}
                             <li>
                                 <a className="no-bottom-line" href="https://www.github.com/tomaarsen" target="_blank" rel="noopener noreferrer">
                                     My GitHub (tomaarsen).

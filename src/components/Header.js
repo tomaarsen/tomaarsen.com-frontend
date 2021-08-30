@@ -32,9 +32,9 @@ class Header extends React.Component {
                         .linkedin()
                         </a>
                     </code>
-                    <code>
+                    {/* <code>
                         .email()
-                    </code>
+                    </code> */}
                 </div>
             </div>
         );

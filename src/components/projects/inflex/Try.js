@@ -1,5 +1,4 @@
 import React from "react";
-import $ from "jquery"; // TODO: Avoid needing this
 
 import "../../../css/form.css";
 import "../../../css/try.css";

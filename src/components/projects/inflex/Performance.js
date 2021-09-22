@@ -1,5 +1,4 @@
 import React from "react";
-import $ from "jquery"; // TODO: Avoid needing this
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { Popover, Button, OverlayTrigger } from "react-bootstrap";

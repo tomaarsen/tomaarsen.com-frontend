@@ -27,6 +27,21 @@ class Performance extends React.Component {
             nTerms: 0
         };
 
+        this.wordforms = [
+            ["sing", "To Singular"],
+            ["plur", "To Plural"],
+            ["past", "To Past"],
+            ["past_part", "To Past Participle"],
+            ["pres_part", "To Present Participle"],
+            ["comp", "To Comparative"],
+            ["super", "To Superlative"]
+        ];
+        this.posToWordforms = {
+            "v": ["sing", "plur", "past", "past_part", "pres_part"],
+            "n": ["sing", "plur"],
+            "a": ["comp", "super"],
+        };
+
         this.startLoading = this.startLoading.bind(this);
         this.postPerformance = this.postPerformance.bind(this);
         this.toggleWordformDisabled = this.toggleWordformDisabled.bind(this);
@@ -55,26 +70,10 @@ class Performance extends React.Component {
         });
     }
 
-    // Disable Past, Past Participle and Present Participle if a POS other than Verb is selected
     toggleWordformDisabled() {
-        const all_wordforms = ["sing", "plur", "past", "past_part", "pres_part", "comp", "super"];
-        const wordforms = {
-            "v": ["sing", "plur", "past", "past_part", "pres_part"],
-            "n": ["sing", "plur"],
-            "a": ["comp", "super"],
-        };
-        all_wordforms.forEach(word_form => {
-            if (wordforms[this.state.pos].includes(word_form)) {
-                // TODO: Avoid needing this
-                $(`#wordform option[value='${word_form}']`).prop('disabled', false);
-            }
-            else {
-                $(`#wordform option[value='${word_form}']`).prop('disabled', true);
-            }
-        });
         // If one of the wordforms that will be disabled has been selected, reset to the first legal option
-        if (!wordforms[this.state.pos].includes(this.state.wordform)) {
-            this.setState({ wordform: wordforms[this.state.pos][0] }, this.postPerformance);
+        if (!this.posToWordforms[this.state.pos].includes(this.state.wordform)) {
+            this.setState({ wordform: this.posToWordforms[this.state.pos][0] }, this.postPerformance);
         } else {
             this.postPerformance();
         }
@@ -159,6 +158,8 @@ class Performance extends React.Component {
             </Popover>
         );
 
+        const enabledWordforms = this.posToWordforms[this.state.pos];
+
         return (
             <div className="performance-wrapper" style={{ overflow: "hidden" }}>
                 <div className="box" style={{position: "relative"}}>
@@ -176,13 +177,11 @@ class Performance extends React.Component {
                         <div className="col-auto">
                             <label htmlFor="wordform" className="form-label">Wordform</label>
                             <select className="form-select" name="wordform" id="wordform" value={this.state.wordform} onChange={this.handleWordform} required>
-                                <option value="sing">To Singular</option>
-                                <option value="plur">To Plural</option>
-                                <option value="past" disabled>To Past</option>
-                                <option value="past_part" disabled>To Past Participle</option>
-                                <option value="pres_part" disabled>To Present Participle</option>
-                                <option value="comp" disabled>To Comparative</option>
-                                <option value="super" disabled>To Superlative</option>
+                                {
+                                    this.wordforms.map(([wordform, text]) => {
+                                        return <option value={wordform} disabled={!enabledWordforms.includes(wordform)}>{text}</option>
+                                    })
+                                }
                             </select>
                             <div className="invalid-feedback">
                                 Please select a valid wordform for this Part of Speech.

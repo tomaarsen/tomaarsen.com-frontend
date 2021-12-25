@@ -1,6 +1,6 @@
 {
   "name": "tomaarsen.com-frontend",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",

@@ -27,7 +27,7 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://api.github.com/users/tomaarsen/repos")
+        fetch("https://api.github.com/users/tomaarsen/repos?per_page=100")
             .then(r => r.json())
             .then(r => this.setState({ repos: r }))
         

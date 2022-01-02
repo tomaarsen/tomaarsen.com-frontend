@@ -16,7 +16,7 @@ class Sidebar extends React.Component {
             }
             return b.size - a.size;
         })
-        .filter(repo => !repo.fork || repo.name === "nltk");
+            .filter(repo => !repo.fork || repo.name === "nltk");
 
         return (
             <div className="sidebar box">
@@ -34,7 +34,7 @@ class Sidebar extends React.Component {
                                 <ul className="list-group list-group-flush ps-1">
                                     {/* All projects (cards) */}
                                     <li className="list-group-item"><NavLink className="dark" exact to="/projects">Overview</NavLink></li>
-                                    
+
                                     {/* Inflex */}
                                     <li className="list-group-item sidebar-list">
                                         <button className="btn btn-toggle align-items-center rounded collapsed"
@@ -56,23 +56,38 @@ class Sidebar extends React.Component {
                                         </div>
                                     </li>
 
+                                    {/* NLTK */}
+                                    <li className="list-group-item sidebar-list">
+                                        <button className="btn btn-toggle align-items-center rounded collapsed"
+                                            data-bs-toggle="collapse" data-bs-target="#nltk-collapse"
+                                            aria-expanded="true">
+                                            NLTK
+                                        </button>
+                                        <div className="collapse show" id="nltk-collapse">
+                                            <ul className="btn-toggle-nav list-unstyled fw-normal">
+                                                <li><NavLink className="dark" exact to="/projects/nltk">Description</NavLink></li>
+                                                <li><NavLink className="dark" exact to="/projects/nltk/usage">Usage</NavLink></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
                                     {/* Twitch */}
                                     <li className="list-group-item sidebar-list">
                                         <button className="btn btn-toggle align-items-center rounded collapsed"
                                             data-bs-toggle="collapse" data-bs-target="#twitch-collapse"
                                             aria-expanded="false">
                                             Twitch Bots
-                                    </button>
+                                        </button>
                                         <div className="collapse" id="twitch-collapse">
                                             <ul className="btn-toggle-nav list-unstyled fw-normal">
                                                 {/* <li><NavLink className="dark" exact to="/projects/try">Try</NavLink></li> */}
                                                 {sortedRepos.filter(repo => repo.name.startsWith("Twitch"))
-                                                .map(repo => <li key={repo.id}><NavLink className="dark" exact to={`/projects/${repo.name}`}>{repo.name}</NavLink></li>)}
+                                                    .map(repo => <li key={repo.id}><NavLink className="dark" exact to={`/projects/${repo.name}`}>{repo.name}</NavLink></li>)}
                                             </ul>
                                         </div>
                                     </li>
 
-                                    {sortedRepos.filter(repo => repo.name !== "Inflex" && !repo.name.startsWith("Twitch"))
+                                    {sortedRepos.filter(repo => repo.name !== "Inflex" && repo.name !== "nltk" && !repo.name.startsWith("Twitch"))
                                         .map(repo => {
                                             return (
                                                 <li key={repo.id} className="list-group-item"><NavLink className="dark" exact to={`/projects/${repo.name}`}>{repo.name}</NavLink></li>

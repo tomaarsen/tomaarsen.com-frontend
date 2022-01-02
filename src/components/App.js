@@ -13,6 +13,8 @@ import Performance from "./projects/inflex/Performance";
 import Readme from "./projects/Readme";
 import Projects from "./projects/Overview";
 
+import Usage from "./projects/nltk/Usage";
+
 import AboutPage from "./about/AboutPage";
 
 import "../css/App.css";
@@ -30,7 +32,7 @@ class Main extends React.Component {
         fetch("https://api.github.com/users/tomaarsen/repos?per_page=100")
             .then(r => r.json())
             .then(r => this.setState({ repos: r }))
-        
+
         // fetch("api/inflex/paper")
         //     .then()
     }
@@ -59,6 +61,7 @@ class Main extends React.Component {
                             )
                         })}
                         <Route exact path="/home" component={AboutPage} />
+                        <Route exact path="/projects/nltk/usage" component={Usage} />
                         {/* Catch all route */}
                         {/* <Route path="*" component={NotFound} /> */}
                     </div>

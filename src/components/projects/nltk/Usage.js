@@ -1,9 +1,27 @@
 import React from "react";
 import Sunburst from 'react-plotly.js';
 
-import { ids, labels, parents, values } from "./chartValues.js";
+import { postJson } from "../../../js/utils.js";
 
 class Usage extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            loading: true,
+
+            ids: [],
+            labels: [],
+            parents: [],
+            values: []
+        };
+    }
+
+    componentDidMount() {
+        postJson("/api/usage").then(response => {
+            this.setState(response);
+        })
+    }
 
     render() {
         return (
@@ -12,10 +30,10 @@ class Usage extends React.Component {
                 <Sunburst
                     data={[
                         {
-                            ids: ids,
-                            labels: labels,
-                            parents: parents,
-                            values: values,
+                            ids: this.state.ids,
+                            labels: this.state.labels,
+                            parents: this.state.parents,
+                            values: this.state.values,
                             branchvalues: "total",
                             insidetextorientation: "radial",
                             maxdepth: 4,

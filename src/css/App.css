@@ -184,3 +184,12 @@ hr {
   /* margin-left: 1.25rem; */
   text-decoration: none;
 }
+
+.external-link-icon {
+  opacity: 25%;
+  margin-left: 1px;
+  margin-top: 4px;
+  /* This makes it a bit smaller */
+  padding-left: 3px; 
+
+}

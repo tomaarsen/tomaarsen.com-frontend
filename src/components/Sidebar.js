@@ -69,7 +69,8 @@ class Sidebar extends React.Component {
                                         <div className="collapse show" id="nltk-collapse">
                                             <ul className="btn-toggle-nav list-unstyled fw-normal">
                                                 <li><NavLink className="dark" exact to="/projects/nltk">Description</NavLink></li>
-                                                <li><NavLink className="dark" exact to="/projects/nltk/usage">Usage</NavLink></li>
+                                                <li><NavLink className="dark" exact to="/projects/nltk/usage/plot">Usage Plot</NavLink></li>
+                                                <li><NavLink className="dark" exact to="/projects/nltk/usage/list">Usage List</NavLink></li>
                                             </ul>
                                         </div>
                                     </li>

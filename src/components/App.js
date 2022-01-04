@@ -13,7 +13,8 @@ import Performance from "./projects/inflex/Performance";
 import Readme from "./projects/Readme";
 import Projects from "./projects/Overview";
 
-import Usage from "./projects/nltk/Usage";
+import UsagePlot from "./projects/nltk/UsagePlot";
+import UsageList from "./projects/nltk/UsageList";
 
 import AboutPage from "./about/AboutPage";
 
@@ -61,7 +62,11 @@ class Main extends React.Component {
                             )
                         })}
                         <Route exact path="/home" component={AboutPage} />
-                        <Route exact path="/projects/nltk/usage" component={Usage} />
+                        <Route exact path="/projects/nltk/usage">
+                            <Redirect to="/projects/nltk/usage/plot" />
+                        </Route>
+                        <Route exact path="/projects/nltk/usage/plot" component={UsagePlot} />
+                        <Route exact path="/projects/nltk/usage/list" component={UsageList} />
                         {/* Catch all route */}
                         {/* <Route path="*" component={NotFound} /> */}
                     </div>

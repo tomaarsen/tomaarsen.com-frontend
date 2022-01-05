@@ -159,6 +159,14 @@ class About extends React.Component {
                             </NavLink>
                         </li>
                         <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/nltk/usage/plot">
+                                Compare usage of NLTK objects.
+                            </NavLink>
+                        </li>
+                    </ul>
+                    <hr />
+                    <ul>
+                        <li>
                             <NavLink className="no-bottom-line" exact to="/projects/TTSTextNormalization">
                                 Convert from written expressions to spoken form.
                             </NavLink>

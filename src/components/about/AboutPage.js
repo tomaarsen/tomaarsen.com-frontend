@@ -167,6 +167,14 @@ class About extends React.Component {
                     <hr />
                     <ul>
                         <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/module_dependencies">
+                                Determine how frequently functionality of your favourite Python module is used.
+                            </NavLink>
+                        </li>
+                    </ul>
+                    <hr />
+                    <ul>
+                        <li>
                             <NavLink className="no-bottom-line" exact to="/projects/TTSTextNormalization">
                                 Convert from written expressions to spoken form.
                             </NavLink>

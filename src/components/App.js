@@ -2,11 +2,12 @@ import React from "react";
 import {
     Route,
     BrowserRouter,
-    Redirect
+    Redirect,
+    Switch
 } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
-// import NotFound from "./NotFound";
+import NotFound from "./NotFound";
 
 import Try from "./projects/inflex/Try";
 import Performance from "./projects/inflex/Performance";
@@ -46,31 +47,34 @@ class Main extends React.Component {
                     <Header />
                     <Sidebar repos={this.state.repos} />
                     <div className="content h-100" style={{ overflow: "hidden" }}>
-                        <Route exact path="/">
-                            <Redirect to="/home" />
-                        </Route>
-                        <Route exact path="/projects">
-                            <Projects repos={this.state.repos} />
-                        </Route>
-                        <Route exact path="/projects/inflex/try" component={Try} />
-                        <Route exact path="/projects/inflex/performance" component={Performance} />
-                        {this.state.repos.map(repo => {
-                            return (
-                                <Route exact path={`/projects/${repo['name']}`} key={repo.id}>
-                                    <Readme repo={repo} />
-                                </Route>
-                            )
-                        })}
-                        <Route exact path="/home" component={AboutPage} />
-                        <Route exact path="/projects/nltk/usage">
-                            <Redirect to="/projects/nltk/usage/plot" />
-                        </Route>
-                        <Route exact path="/projects/nltk/usage/plot" component={UsagePlot} />
-                        <Route exact path="/projects/nltk/usage/list" component={UsageList} />
-                        {/* Catch all route */}
-                        {/* <Route path="*" component={NotFound} /> */}
+                        <Switch>
+                            <Route exact path="/">
+                                <Redirect to="/home" />
+                            </Route>
+                            <Route exact path="/projects">
+                                <Projects repos={this.state.repos} />
+                            </Route>
+                            <Route exact path="/projects/inflex/try" component={Try} />
+                            <Route exact path="/projects/inflex/performance" component={Performance} />
+                            {this.state.repos.map(repo => {
+                                return (
+                                    <Route exact path={`/projects/${repo['name']}`} key={repo.id}>
+                                        <Readme repo={repo} />
+                                    </Route>
+                                )
+                            })}
+                            <Route exact path="/home" component={AboutPage} />
+                            <Route exact path="/projects/nltk/usage">
+                                <Redirect to="/projects/nltk/usage/plot" />
+                            </Route>
+                            <Route exact path="/projects/nltk/usage/plot" component={UsagePlot} />
+                            <Route exact path="/projects/nltk/usage/list" component={UsageList} />
+                            
+                            {/* Catch all - redirect to 404 */}
+                            <Route path="/404" exact={true} component={NotFound} />
+                            <Redirect to="/404" />
+                        </Switch>
                     </div>
-                    {/* <About /> */}
                 </div>
             </BrowserRouter>
         );

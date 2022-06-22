@@ -3,24 +3,25 @@
     display: grid;
     
     grid-template-columns: repeat(3, 23.5rem);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: 'about languages recommended';
+    /* grid-template-rows: repeat(2, auto); */
+    grid-template-areas: 'about recommended languages'
+                         'about recommended links';
 
     gap: 1.5rem;
     /* text-align: center; */
     height: 100%;
     /* width: 75%; */
     overflow-y: auto;
-    align-items: baseline;
+    align-items: stretch;
 }
 
-@media only screen and (max-width: 95rem) {
+@media only screen and (max-width: 97rem) {
     
     .about-grid {
         grid-template-columns: repeat(2, 23.5rem);
         grid-template-rows: repeat(2, auto);
-        grid-template-areas: 'about languages'
-                            'about recommended';
+        grid-template-areas: 'about recommended'
+                             'links languages';
         /* Padding for the scrollbar: */
         padding-right: 1rem; 
     }
@@ -32,6 +33,7 @@
         grid-template-columns: 23.5rem;
         grid-template-rows: repeat(3, auto);
         grid-template-areas: 'about' 
+                             'links'
                              'recommended'
                              'languages';
         /* Padding for the scrollbar: */
@@ -44,7 +46,8 @@
     .about-grid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, auto);
-        grid-template-areas: 'about' 
+        grid-template-areas: 'about'
+                             'links'
                              'recommended'
                              'languages';
         /* Remove padding for the scrollbar: */

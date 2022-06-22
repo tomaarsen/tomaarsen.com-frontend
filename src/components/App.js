@@ -72,7 +72,7 @@ class Main extends React.Component {
                             
                             {/* Catch all - redirect to 404 */}
                             <Route path="/404" exact={true} component={NotFound} />
-                            <Redirect to="/404" />
+                            {this.state.repos.length > 0 && <Redirect to="/404" />}
                         </Switch>
                     </div>
                 </div>

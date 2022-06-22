@@ -10,6 +10,7 @@ import {
 class Sidebar extends React.Component {
     render() {
 
+        // Get a sorted list of repositories, excluding forks and "nltk"
         let sortedRepos = this.props.repos.sort((a, b) => {
             if (a.fork && !b.fork) {
                 return -1;
@@ -18,8 +19,7 @@ class Sidebar extends React.Component {
                 return 1;
             }
             return b.size - a.size;
-        })
-            .filter(repo => !repo.fork || repo.name === "nltk");
+        }).filter(repo => !repo.fork || repo.name === "nltk");
 
         return (
             <div className="sidebar box">
@@ -75,6 +75,21 @@ class Sidebar extends React.Component {
                                         </div>
                                     </li>
 
+                                    {/* This Website */}
+                                    <li className="list-group-item sidebar-list">
+                                        <button className="btn btn-toggle align-items-center rounded collapsed"
+                                            data-bs-toggle="collapse" data-bs-target="#website-collapse"
+                                            aria-expanded="true">
+                                            tomaarsen.com
+                                        </button>
+                                        <div className="collapse show" id="website-collapse">
+                                            <ul className="btn-toggle-nav list-unstyled fw-normal">
+                                                <li><NavLink className="dark" exact to="/projects/tomaarsen.com-frontend">Frontend</NavLink></li>
+                                                <li><NavLink className="dark" exact to="/projects/tomaarsen.com-backend">Backend</NavLink></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
                                     {/* Twitch */}
                                     <li className="list-group-item sidebar-list">
                                         <button className="btn btn-toggle align-items-center rounded collapsed"
@@ -84,19 +99,26 @@ class Sidebar extends React.Component {
                                         </button>
                                         <div className="collapse" id="twitch-collapse">
                                             <ul className="btn-toggle-nav list-unstyled fw-normal">
-                                                {/* <li><NavLink className="dark" exact to="/projects/try">Try</NavLink></li> */}
-                                                {sortedRepos.filter(repo => repo.name.startsWith("Twitch"))
-                                                    .map(repo => <li key={repo.id}><NavLink className="dark" exact to={`/projects/${repo.name}`}>{repo.name}</NavLink></li>)}
+                                                {sortedRepos
+                                                    .filter(repo => repo.name.startsWith("Twitch"))
+                                                    .map(repo => <li key={repo.id}>
+                                                        <NavLink className="dark" exact to={`/projects/${repo.name}`}>{repo.name}</NavLink>
+                                                    </li>)
+                                                }
                                             </ul>
                                         </div>
                                     </li>
 
-                                    {sortedRepos.filter(repo => repo.name !== "Inflex" && repo.name !== "nltk" && !repo.name.startsWith("Twitch"))
+                                    {sortedRepos
+                                        .filter(repo => repo.name !== "Inflex" && repo.name !== "nltk" && !repo.name.startsWith("Twitch") && !repo.name.startsWith("tomaarsen.com-"))
                                         .map(repo => {
                                             return (
-                                                <li key={repo.id} className="list-group-item"><NavLink className="dark" exact to={`/projects/${repo.name}`}>{repo.name}</NavLink></li>
+                                                <li key={repo.id} className="list-group-item">
+                                                    <NavLink className="dark" exact to={`/projects/${repo.name}`}>{repo.name}</NavLink>
+                                                </li>
                                             )
-                                        })}
+                                        })
+                                    }
                                 </ul>
                             </div>
                         </div>

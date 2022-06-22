@@ -4,7 +4,7 @@ class Row extends React.Component {
     // constructor() {
     //     super();
     // }
-    
+
     handleWord(event) {
         return;
     }
@@ -37,7 +37,7 @@ class Row extends React.Component {
                 </td>
                 <td>
                     {/* onChange={this.handleOutput} */}
-                    <input type="text" className={classes} value={value} aria-label="Output" readOnly/>
+                    <input type="text" className={classes} value={value} aria-label="Output" readOnly />
                 </td>
             </tr>
         );

@@ -69,7 +69,7 @@ class Main extends React.Component {
                             </Route>
                             <Route exact path="/projects/nltk/usage/plot" component={UsagePlot} />
                             <Route exact path="/projects/nltk/usage/list" component={UsageList} />
-                            
+
                             {/* Catch all - redirect to 404 */}
                             <Route path="/404" exact={true} component={NotFound} />
                             {this.state.repos.length > 0 && <Redirect to="/404" />}

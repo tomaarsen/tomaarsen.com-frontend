@@ -6,30 +6,30 @@ class Header extends React.Component {
         return (
             <div className="header box">
                 <div className="header-flex w-100">
-                    <code style={{flexGrow: 1, color: "#212529"}}>
+                    <code style={{ flexGrow: 1, color: "#212529" }}>
                         <NavLink className="dark" exact to="/home">
-                        Tom Aarsen
+                            Tom Aarsen
                         </NavLink>
                     </code>
-                    
+
                     <code>
                         <NavLink className="dark" exact to="/projects">
-                        .projects()
+                            .projects()
                         </NavLink>
                     </code>
                     <code>
                         <NavLink className="dark" exact to="/home">
-                        .about()
+                            .about()
                         </NavLink>
                     </code>
                     <code>
                         <a className="dark" href="https://www.github.com/tomaarsen">
-                        .github()
+                            .github()
                         </a>
                     </code>
                     <code>
                         <a className="dark" href="https://www.linkedin.com/in/tomaarsen">
-                        .linkedin()
+                            .linkedin()
                         </a>
                     </code>
                     <code>

@@ -23,7 +23,7 @@ class UsagePlot extends React.Component {
                 <div style={{ textAlign: "center" }}>
                     Cumulative usage of objects from the Natural Language Toolkit (NLTK)
                     <br />
-                    <a style={{fontSize: 14}} className="dark" href="/projects/module_dependencies">This list was generated using my <span className="code">module_dependencies</span> Python module. Click this to find out more.</a>
+                    <a style={{ fontSize: 14 }} className="dark" href="/projects/module_dependencies">This list was generated using my <span className="code">module_dependencies</span> Python module. Click this to find out more.</a>
                 </div>
                 <table className="table" style={{ maxWidth: "100%", tableLayout: "fixed" }}>
                     <thead className="thead-light">

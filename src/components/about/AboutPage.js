@@ -25,7 +25,7 @@ class About extends React.Component {
     render() {
         return (
             <div className="about-grid">
-                <div className="about d-grid" style={{gap: "1.5rem"}}>
+                <div className="about d-grid" style={{ gap: "1.5rem" }}>
                     <div className="box">
                         <h5>About</h5>
                         <hr />
@@ -36,7 +36,7 @@ class About extends React.Component {
                         </ul> */}
                         {/* Hello. I'm Tom Aarsen, a {moment().diff('1999-12-02', 'years')} year old Programming enthusiast */}
                         Hello.<br /><br />
-                        I'm Tom Aarsen - a Master student of the Data Science specialisation in Computing Science, based in the Netherlands. 
+                        I'm Tom Aarsen - a Master student of the Data Science specialisation in Computing Science, based in the Netherlands.
                         I'm a Python enthusiast, with an interest in <a className="no-bottom-line" href="https://en.wikipedia.org/wiki/Natural_language_processing">NLP</a> and open sourced projects.
                         <hr />
                         I'm the author of <NavLink className="no-bottom-line" exact to="/projects/inflex">Inflex</NavLink>,
@@ -49,7 +49,7 @@ class About extends React.Component {
                         <h5>Links</h5>
                         <hr />
                         Contact me through one of the links below:
-                        <ul style={{paddingTop: "10px"}}>
+                        <ul style={{ paddingTop: "10px" }}>
                             {/* <li>
                                 <i>Email Link</i>
                             </li> */}
@@ -97,9 +97,9 @@ class About extends React.Component {
                         <li>Markdown</li>
                         {/* Proof */}
                         <li>Coq</li>
-                        
+
                         <li>Assembly</li>
-                        
+
                         <li><div className="text-muted">and more...</div></li>
                     </ul>
                     {/* 

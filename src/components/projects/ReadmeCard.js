@@ -54,7 +54,7 @@ const ReadmeCard = ({ name, description, fork, language, stargazers_count, forks
     }
 
     // Hardcode linking to the parent repository for NLTK
-    if (name === "nltk"){
+    if (name === "nltk") {
         html_url = html_url.replace("tomaarsen", "nltk");
     }
 

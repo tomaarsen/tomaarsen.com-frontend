@@ -173,7 +173,7 @@ class Try extends React.Component {
 
         return (
             <div className="box">
-                <div className="container mw-100" style={{position: "relative"}}>
+                <div className="container mw-100" style={{ position: "relative" }}>
                     <div className="spinner-border spinner-border-sm" style={{ position: "absolute", right: "1.75rem", opacity: this.state.loading ? 1 : 0 }} />
                     <form id="inflex_form" className="row needs-validation" method="post" noValidate onSubmit={this.handleSubmit}>
                         <div className="col-auto">

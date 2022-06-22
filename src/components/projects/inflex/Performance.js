@@ -161,7 +161,7 @@ class Performance extends React.Component {
 
         return (
             <div className="performance-wrapper" style={{ overflow: "hidden" }}>
-                <div className="box" style={{position: "relative"}}>
+                <div className="box" style={{ position: "relative" }}>
                     <div className="spinner-border" style={{ position: "absolute", right: "1.5rem", opacity: this.state.loading ? 1 : 0 }} />
                     <form id="inflex_form" className="row needs-validation" method="post" noValidate>
                         <div className="col-auto">

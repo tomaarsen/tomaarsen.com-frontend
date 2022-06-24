@@ -56,6 +56,6 @@ class Readme extends React.Component {
     }
 }
 
-// TODO: Fix links to code files (TTSTextNormalization)
+// TODO: Add papers of SPLCompiler
 
 export default Readme;

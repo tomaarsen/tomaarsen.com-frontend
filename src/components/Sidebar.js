@@ -19,7 +19,8 @@ class Sidebar extends React.Component {
                 return 1;
             }
             return b.size - a.size;
-        }).filter(repo => !repo.fork || repo.name === "nltk");
+        }).filter(repo => !repo.fork || ["nltk", "nltk_theme"].includes(repo.name));
+        // Filter out Forks, except nltk and nltk_theme
 
         return (
             <div className="sidebar box">
@@ -109,16 +110,29 @@ class Sidebar extends React.Component {
                                         </div>
                                     </li>
 
-                                    {sortedRepos
-                                        .filter(repo => repo.name !== "Inflex" && repo.name !== "nltk" && !repo.name.startsWith("Twitch") && !repo.name.startsWith("tomaarsen.com-"))
-                                        .map(repo => {
-                                            return (
-                                                <li key={repo.id} className="list-group-item">
-                                                    <NavLink className="dark" exact to={`/projects/${repo.name}`}>{repo.name}</NavLink>
-                                                </li>
-                                            )
-                                        })
-                                    }
+                                    {/* Miscellaneous */}
+                                    <li className="list-group-item sidebar-list">
+                                        <button className="btn btn-toggle align-items-center rounded collapsed"
+                                            data-bs-toggle="collapse" data-bs-target="#misc-collapse"
+                                            aria-expanded="true">
+                                            Miscellaneous
+                                        </button>
+                                        <div className="collapse show" id="misc-collapse">
+                                            <ul className="btn-toggle-nav list-unstyled fw-normal">
+                                                {sortedRepos
+                                                    .filter(repo => repo.name !== "Inflex" && repo.name !== "nltk" && !repo.name.startsWith("Twitch") && !repo.name.startsWith("tomaarsen.com-"))
+                                                    .map(repo => {
+                                                        return (
+                                                            <li key={repo.id}>
+                                                                <NavLink className="dark" exact to={`/projects/${repo.name}`}>{repo.name}</NavLink>
+                                                            </li>
+                                                        )
+                                                    })
+                                                }
+                                            </ul>
+                                        </div>
+                                    </li>
+
                                 </ul>
                             </div>
                         </div>

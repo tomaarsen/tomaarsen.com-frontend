@@ -187,9 +187,6 @@ class About extends React.Component {
                                 Determine how frequently functionality of your favourite Python module is used.
                             </NavLink>
                         </li>
-                    </ul>
-                    <hr />
-                    <ul>
                         <li>
                             <NavLink className="no-bottom-line" exact to="/projects/TTSTextNormalization">
                                 Convert from written expressions to spoken form.

@@ -14,7 +14,6 @@ const colors = [
     "rgba(231, 111, 81, 0.6)",
 ]
 
-// console.log(defaults);
 defaults.global.pointHitDetectionRadius = 1;
 
 var customTooltips = function (tooltip) {

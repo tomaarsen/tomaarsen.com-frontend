@@ -12,13 +12,15 @@ import NotFound from "./NotFound";
 import Try from "./projects/inflex/Try";
 import Performance from "./projects/inflex/Performance";
 import Readme from "./projects/Readme";
-import Projects from "./projects/Overview";
+import Overview from "./projects/Overview";
 
 import UsagePlot from "./projects/nltk/UsagePlot";
 import UsageList from "./projects/nltk/UsageList";
 
 import AboutPage from "./about/AboutPage";
 
+import "../css/color.css";
+import "../css/fonts.css";
 import "../css/App.css";
 
 class Main extends React.Component {
@@ -34,9 +36,6 @@ class Main extends React.Component {
         fetch("https://api.github.com/users/tomaarsen/repos?per_page=100")
             .then(r => r.json())
             .then(r => this.setState({ repos: r }))
-
-        // fetch("api/inflex/paper")
-        //     .then()
     }
 
     render() {
@@ -52,7 +51,7 @@ class Main extends React.Component {
                                 <Redirect to="/home" />
                             </Route>
                             <Route exact path="/projects">
-                                <Projects repos={this.state.repos} />
+                                <Overview repos={this.state.repos} />
                             </Route>
                             <Route exact path="/projects/inflex/try" component={Try} />
                             <Route exact path="/projects/inflex/performance" component={Performance} />

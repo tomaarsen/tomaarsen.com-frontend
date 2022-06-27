@@ -73,8 +73,8 @@ const ReadmeCard = ({ name, description, fork, language, stargazers_count, forks
                     This page contains information on my {name} project.<br />
                     <em className="text-muted">Click the header above to visit the repository on GitHub.</em>
                 </p>
-                <ul className="list-group list-group-horizontal" style={{ alignContent: "stretch" }}>
-                    <li className="list-group-item text-muted" style={{ flexGrow: 1 }}><em>Mainly written in {language}</em></li>
+                <ul className="list-group list-group-horizontal card-body-bar" style={{ alignContent: "stretch" }}>
+                    <li className="list-group-item text-muted" style={{ flexGrow: 1 }}><em>Primarily written in {language}</em></li>
                     <li className="list-group-item text-muted"><em>Last edited {getRelativeTime(+new Date(updated_at))}</em></li>
                     <li className="list-group-item text-muted"><em>Created on {months[date.getMonth()]} {day}{suffix} {date.getFullYear()}</em></li>
                     {/* <li className="list-group-item"><img src="../eye.svg" alt="Watchers" /> {subscribers_count}</li> */}

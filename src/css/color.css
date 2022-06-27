@@ -1,0 +1,32 @@
+/* html {
+    --bg-color: #0d1117;
+
+    --box-main-color: #0d1117;
+    --box-secondary-color: #8ecae6;
+    --box-tertiary-color: #0d1117;
+    
+    --box-border-color: #30363d;
+
+    --box-dark-text-color: var(--box-normal-text-color);
+    --box-normal-text-color: #8b949e;
+    --box-light-text-color: #6c757d;
+
+    --link-color: #58a6ff;
+    --visited-link-color: var(--link-color);
+} */
+html {
+    --bg-color: #fcfcfc;
+
+    --box-main-color: #ffffff;
+    --box-secondary-color: #f7f7f7;
+    --box-tertiary-color: #f0f0f0;
+    
+    --box-border-color: #ced4da;
+
+    --box-dark-text-color: var(--box-normal-text-color);
+    --box-normal-text-color: #212529;
+    --box-light-text-color: #6c757d;
+
+    --link-color: #0d6efd;
+    --visited-link-color: var(--link-color);
+}

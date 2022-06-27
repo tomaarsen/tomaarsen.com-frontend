@@ -65,7 +65,7 @@ class Performance extends React.Component {
                 performance: response.performance,
                 nTerms: response.n_terms,
                 loading: false
-            }, () => console.log(this.state));
+            });
         });
     }
 

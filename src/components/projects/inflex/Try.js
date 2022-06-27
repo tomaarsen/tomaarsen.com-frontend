@@ -114,7 +114,7 @@ class Try extends React.Component {
                 knownCorrects: response.known_corrects,
                 answers: this.normalizeAnswers(response.answers),
                 loading: false
-            }, () => console.log(this.state));
+            });
         });
     }
 
@@ -156,10 +156,6 @@ class Try extends React.Component {
     componentDidMount() {
         this.postModules();
     }
-
-    // componentDidUpdate(prevProps, prevState) {
-    //     console.log(prevState);
-    // }
 
     render() {
 

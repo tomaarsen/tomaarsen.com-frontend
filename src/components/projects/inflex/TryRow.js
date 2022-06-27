@@ -12,7 +12,6 @@ class Row extends React.Component {
     render() {
         let classes = "form-control try-output";
         let value = "";
-        console.log(this.props);
         if (!(this.props.output === null)) {
             if (this.props.output.length === 0) {
                 classes += " italic is-warning";

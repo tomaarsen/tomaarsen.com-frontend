@@ -1,6 +1,20 @@
 
 .readme-card {
-    border: 1px solid #ced4da;
+    border: 1px solid var(--box-border-color);
+    overflow: hidden;
+}
+
+.readme-card > .card-header {
+    background-color: var(--box-secondary-color);
+    border-color: var(--box-border-color);
+}
+
+.readme-card > .card-body {
+    background-color: var(--box-main-color);
+}
+
+.readme-card > .card-body > .card-body-bar {
+    background-color: var(--box-tertiary-color);
 }
 
 .row-grid {
@@ -29,7 +43,7 @@
 
 .row-grid > .box > pre,
 .row-grid > .box > code {
-    background-color: #f8f8f8;
+    background-color: var(--box-secondary-color);
 }
 
 .row-grid > .box > table, 
@@ -38,7 +52,7 @@
 .row-grid > .box > table > tr > th,
 .row-grid > .box > table > tr > td,
 .row-grid > .box > table {
-    border: 1px solid #ced4da;
+    border: 1px solid var(--box-border-color);
     padding: 0.5rem;
 }
 

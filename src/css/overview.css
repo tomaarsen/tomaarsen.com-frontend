@@ -10,11 +10,24 @@
 }
 
 .repo-card {
-    border: 1px solid #ced4da;
+    border-color: var(--box-border-color);
     height: 100%;
+    overflow: hidden;
+
+    /* box-shadow: 5px 5px 0px var(--box-border-color); */
+}
+
+.repo-card > .card-header {
+    background-color: var(--box-secondary-color);
+    border-color: var(--box-border-color);
 }
 
 .repo-card > .card-body {
+    background-color: var(--box-main-color);
     display: grid;
     grid-template-rows: auto min-content;
+}
+
+.repo-card > .card-body > .card-body-bar {
+    background-color: var(--box-tertiary-color);
 }

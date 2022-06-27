@@ -29,7 +29,6 @@ class Readme extends React.Component {
         // TODO: Cache this API call
         fetch(`https://raw.githubusercontent.com/${this.props.repo.full_name}/${this.props.repo.default_branch}/README.md`)
             .then(r => r.text())
-            .then(r => { console.log(r); return r })
             .then(r => this.setState({
                 convertedMarkdown:
                     "<div class='box'>" +

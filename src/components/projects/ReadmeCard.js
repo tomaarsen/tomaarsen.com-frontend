@@ -73,13 +73,13 @@ const ReadmeCard = ({ name, description, fork, language, stargazers_count, forks
                     This page contains information on my {name} project.<br />
                     <em className="text-muted">Click the header above to visit the repository on GitHub.</em>
                 </p>
-                <ul className="list-group list-group-horizontal card-body-bar" style={{ alignContent: "stretch" }}>
-                    <li className="list-group-item text-muted" style={{ flexGrow: 1 }}><em>Primarily written in {language}</em></li>
-                    <li className="list-group-item text-muted"><em>Last edited {getRelativeTime(+new Date(updated_at))}</em></li>
-                    <li className="list-group-item text-muted"><em>Created on {months[date.getMonth()]} {day}{suffix} {date.getFullYear()}</em></li>
+                <ul className="list-group list-group-horizontal flex-wrap card-body-bar" >
+                    <li className="list-group-item text-muted fg-inf"><em>Primarily written in {language}</em></li>
+                    <li className="list-group-item text-muted fg-1"><em>Last edited {getRelativeTime(+new Date(updated_at))}</em></li>
+                    <li className="list-group-item text-muted fg-1"><em>Created on {months[date.getMonth()]} {day}{suffix} {date.getFullYear()}</em></li>
                     {/* <li className="list-group-item"><img src="../eye.svg" alt="Watchers" /> {subscribers_count}</li> */}
-                    <li className="list-group-item"><img src="../star.svg" alt="Stars" />{stargazers_count}</li>
-                    <li className="list-group-item"><img src="../fork.svg" alt="Forks" />{forks_count}</li>
+                    <li className="list-group-item fg-1"><img src="../star.svg" alt="Stars" />{stargazers_count}</li>
+                    <li className="list-group-item fg-1"><img src="../fork.svg" alt="Forks" />{forks_count}</li>
                 </ul>
             </div>
         </div>

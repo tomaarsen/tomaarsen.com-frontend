@@ -13,8 +13,6 @@
     border-color: var(--box-border-color);
     height: 100%;
     overflow: hidden;
-
-    /* box-shadow: 5px 5px 0px var(--box-border-color); */
 }
 
 .repo-card > .card-header {

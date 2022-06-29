@@ -21,7 +21,8 @@ class Sidebar extends React.Component {
                 return 1;
             }
             return b.size - a.size;
-        }).filter(repo => !repo.fork || ["nltk", "nltk_theme"].includes(repo.name));
+        }).filter(repo => !repo.fork || ["nltk", "nltk_theme"].includes(repo.name))
+        .filter(repo => repo.name !== "Binance-Portfolio-Reallocation-Showcase");
         // Filter out Forks, except nltk and nltk_theme
 
         return (

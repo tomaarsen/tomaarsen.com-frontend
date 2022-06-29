@@ -54,21 +54,22 @@ class About extends React.Component {
                 </div>
 
                 <div className="languages box">
-                    <h5>Languages I'm familiar with</h5>
+                    <h5>Languages I've used</h5>
                     {/* <div className="text-muted">A non-complete of languages which I have used over the years.</div> */}
                     <hr />
                     <ul>
                         {/* Main */}
                         <li>Python</li>
                         {/* Web */}
-                        <li>HTML</li>
                         <li>JavaScript (incl. jQuery, React)</li>
-                        <li>PHP</li>
+                        <li>HTML</li>
                         <li>CSS</li>
+                        <li>PHP</li>
                         {/* C-likes */}
                         <li>C</li>
                         <li>C++</li>
                         <li>C# (Unity)</li>
+                        <li>Rust</li>
                         <li>Java</li>
                         <li>Scala</li>
                         <li>Perl</li>

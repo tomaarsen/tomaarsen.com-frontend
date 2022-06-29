@@ -11,7 +11,7 @@ class NotFound extends React.Component {
                     <div className="box" style={{ width: "max-content" }}>
                         <h4>404 - Not Found!</h4>
                         <hr />
-                        <a href="/home">Go Home</a>, you're drunk.
+                        <a href="/home">Go home</a>, you're drunk.
                     </div>
                 </NavLink>
 
@@ -19,7 +19,7 @@ class NotFound extends React.Component {
                     <div className="box delay" style={{ width: "max-content" }}>
                         <h4>404 - Not Found!</h4>
                         <hr />
-                        <a href="/home">Go Home</a>, you're drunk.
+                        <a href="/home">Go home</a>, you're drunk.
                     </div>
                 </NavLink>
 
@@ -27,7 +27,7 @@ class NotFound extends React.Component {
                     <div className="box large_delay" style={{ width: "max-content" }}>
                         <h4>404 - Not Found!</h4>
                         <hr />
-                        <a href="/home">Go Home</a>, you're drunk.
+                        <a href="/home">Go home</a>, you're drunk.
                     </div>
                 </NavLink>
             </div>

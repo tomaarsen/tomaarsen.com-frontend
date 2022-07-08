@@ -50,7 +50,7 @@ class About extends React.Component {
                     I've also developed well over a dozen Twitch.tv bots, which now run in countless chat rooms. Beyond that, I've completed over half a dozen projects on a freelance basis over the years.
                     <hr />
                     
-                    Lastly, I've developed websites (including this one!) from scratch, and have scored well in several Kaggle competitions (<NavLink className="no-bottom-line" exact to="/projects/Hotel-ID-2022">Hotel ID</NavLink>, <NavLink className="no-bottom-line" exact to="/projects/TTSTextNormalization">TTSTextNormalization</NavLink>).
+                    Lastly, I've developed websites from scratch (including this one!), and have scored well in several Kaggle competitions (<NavLink className="no-bottom-line" exact to="/projects/Hotel-ID-2022">Hotel ID</NavLink>, <NavLink className="no-bottom-line" exact to="/projects/TTSTextNormalization">TTSTextNormalization</NavLink>).
                 </div>
 
                 <div className="languages box">

@@ -3,9 +3,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
-import {
-    NavLink,
-} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "../css/sidebar.css";
 
@@ -22,7 +20,7 @@ class Sidebar extends React.Component {
             }
             return b.size - a.size;
         }).filter(repo => !repo.fork || ["nltk", "nltk_theme"].includes(repo.name))
-        .filter(repo => repo.name !== "Binance-Portfolio-Reallocation-Showcase");
+            .filter(repo => repo.name !== "Binance-Portfolio-Reallocation-Showcase");
         // Filter out Forks, except nltk and nltk_theme
 
         return (

@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { Popover, Button, OverlayTrigger } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 
 import "../../../css/performance.css";
 import "../../../css/form.css";
@@ -161,6 +162,13 @@ class Performance extends React.Component {
 
         return (
             <div className="performance-wrapper" style={{ overflow: "hidden" }}>
+                <Helmet>
+                    {/* Imports for Performance tab */}
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@v0.7.7"></script>
+                </Helmet>
                 <div className="box" style={{ position: "relative" }}>
                     <div className="spinner-border" style={{ position: "absolute", right: "1.5rem", opacity: this.state.loading ? 1 : 0 }} />
                     <form id="inflex_form" className="row needs-validation" method="post" noValidate>

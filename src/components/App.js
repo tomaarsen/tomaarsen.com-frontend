@@ -8,6 +8,7 @@ import {
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import NotFound from "./NotFound";
+import Loading from "./Loading";
 
 import Try from "./projects/inflex/Try";
 import Readme from "./projects/Readme";
@@ -49,7 +50,7 @@ class Main extends React.Component {
                     <Header />
                     <Sidebar repos={this.state.repos} />
                     <div className="content h-100" style={{ overflow: "hidden" }}>
-                        <Suspense fallback={<h1>Loading...</h1>}>
+                        <Suspense fallback={<Loading />}>
                             <Switch>
                                 <Route exact path="/">
                                     <Redirect to="/home" />

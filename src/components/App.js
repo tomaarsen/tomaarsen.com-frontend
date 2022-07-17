@@ -5,6 +5,8 @@ import {
     Redirect,
     Switch
 } from "react-router-dom";
+import { QueryClientProvider, QueryClient, useQuery } from "react-query";
+
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import NotFound from "./NotFound";
@@ -27,63 +29,65 @@ import "../css/App.css";
 // allowing it to be built into a separate package
 const Performance = lazy(() => import("./projects/inflex/Performance"));
 
-class Main extends React.Component {
-
-    constructor() {
-        super();
-        this.state = {
-            repos: []
-        }
+function Main() {
+    let { isLoading, data } = useQuery(['repoData'], () =>
+        fetch('https://api.github.com/users/tomaarsen/repos?per_page=100').then(res =>
+            res.json()
+        )
+    )
+    if (isLoading) {
+        data = [];
     }
+    return (
+        <BrowserRouter>
+            <Route exact path="/projects/inflex/paper" />
+            <div className="layout">
+                <Header />
+                <Sidebar repos={data} />
+                <div className="content h-100" style={{ overflow: "hidden" }}>
+                    <Suspense fallback={<Loading />}>
+                        <Switch>
+                            <Route exact path="/">
+                                <Redirect to="/home" />
+                            </Route>
+                            <Route exact path="/projects">
+                                <Overview repos={data} />
+                            </Route>
+                            <Route exact path="/projects/inflex/try" component={Try} />
+                            <Route exact path="/projects/inflex/performance" component={Performance} />
+                            {data.map(repo => {
+                                return (
+                                    <Route exact path={`/projects/${repo['name']}`} key={repo.id}>
+                                        <Readme repo={repo} />
+                                    </Route>
+                                )
+                            })}
+                            <Route exact path="/home" component={AboutPage} />
+                            <Route exact path="/projects/nltk/usage">
+                                <Redirect to="/projects/nltk/usage/plot" />
+                            </Route>
+                            <Route exact path="/projects/nltk/usage/plot" component={UsagePlot} />
+                            <Route exact path="/projects/nltk/usage/list" component={UsageList} />
 
-    componentDidMount() {
-        fetch("https://api.github.com/users/tomaarsen/repos?per_page=100")
-            .then(r => r.json())
-            .then(r => this.setState({ repos: r }))
-    }
-
-    render() {
-        return (
-            <BrowserRouter>
-                <Route exact path="/projects/inflex/paper" />
-                <div className="layout">
-                    <Header />
-                    <Sidebar repos={this.state.repos} />
-                    <div className="content h-100" style={{ overflow: "hidden" }}>
-                        <Suspense fallback={<Loading />}>
-                            <Switch>
-                                <Route exact path="/">
-                                    <Redirect to="/home" />
-                                </Route>
-                                <Route exact path="/projects">
-                                    <Overview repos={this.state.repos} />
-                                </Route>
-                                <Route exact path="/projects/inflex/try" component={Try} />
-                                <Route exact path="/projects/inflex/performance" component={Performance} />
-                                {this.state.repos.map(repo => {
-                                    return (
-                                        <Route exact path={`/projects/${repo['name']}`} key={repo.id}>
-                                            <Readme repo={repo} />
-                                        </Route>
-                                    )
-                                })}
-                                <Route exact path="/home" component={AboutPage} />
-                                <Route exact path="/projects/nltk/usage">
-                                    <Redirect to="/projects/nltk/usage/plot" />
-                                </Route>
-                                <Route exact path="/projects/nltk/usage/plot" component={UsagePlot} />
-                                <Route exact path="/projects/nltk/usage/list" component={UsageList} />
-
-                                {/* Catch all - redirect to 404 */}
-                                <Route path="/404" exact={true} component={NotFound} />
-                                {this.state.repos.length > 0 && <Redirect to="/404" />}
-                            </Switch>
-                        </Suspense>
-                    </div>
+                            {/* Catch all - redirect to 404 */}
+                            <Route path="/404" exact={true} component={NotFound} />
+                            {data.length > 0 && <Redirect to="/404" />}
+                        </Switch>
+                    </Suspense>
                 </div>
-            </BrowserRouter>
-        );
-    }
+            </div>
+        </BrowserRouter>
+    );
 }
 
-export default Main;
+const queryClient = new QueryClient();
+
+const App = () => {
+    return (
+        <QueryClientProvider client={queryClient}>
+            <Main />
+        </QueryClientProvider>
+    );
+}
+
+export default App;

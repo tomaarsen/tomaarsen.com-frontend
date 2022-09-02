@@ -14,7 +14,7 @@ body {
     background-color: var(--bg-color);
     color: var(--box-normal-text-color);
     /* font-family: var(--bs-font-monospace) */
-    font-family: "Open Sans";
+    font-family: "Open Sans", "Segoe UI";
     /* font-family: "Roboto"; */
 }
 

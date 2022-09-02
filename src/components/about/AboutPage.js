@@ -44,12 +44,12 @@ class About extends React.Component {
                     <hr />
                     {/* I'm the author of <NavLink className="no-bottom-line" exact to="/projects/inflex">Inflex</NavLink>, */}
                     {/* and I'm a member of the team behind <a className="no-bottom-line" href="https://github.com/nltk/nltk">NLTK</a>, a well-known NLP Python library boasting over 10k stars on GitHub.<br /> */}
-                    I'm a core maintainer of <a className="no-bottom-line" href="https://github.com/nltk/nltk">NLTK</a>, a well-known NLP Python library boasting over 10k stars on GitHub, 
+                    I'm a core maintainer of <a className="no-bottom-line" href="https://github.com/nltk/nltk">NLTK</a>, a well-known NLP Python library boasting over 10k stars on GitHub,
                     and I've authored dozens of projects including <NavLink className="no-bottom-line" exact to="/projects/inflex">Inflex</NavLink> and <NavLink className="no-bottom-line" exact to="/projects/module_dependencies">module_dependencies</NavLink>.<br />
                     <hr />
                     I've also developed well over a dozen Twitch.tv bots, which now run in countless chat rooms. Beyond that, I've completed over half a dozen projects on a freelance basis over the years.
                     <hr />
-                    
+
                     Lastly, I've developed websites from scratch (including this one!), and have scored well in several Kaggle competitions (<NavLink className="no-bottom-line" exact to="/projects/Hotel-ID-2022">Hotel ID</NavLink>, <NavLink className="no-bottom-line" exact to="/projects/TTSTextNormalization">TTSTextNormalization</NavLink>).
                 </div>
 
@@ -123,7 +123,7 @@ class About extends React.Component {
                     <h5>Links</h5>
                     <hr />
                     Find me through one of the links below:
-                    <ul style={{ paddingTop: "10px", marginBottom: "0px"}}>
+                    <ul style={{ paddingTop: "10px", marginBottom: "0px" }}>
                         {/* <li>
                             <i>Email Link</i>
                         </li> */}
@@ -200,7 +200,7 @@ class About extends React.Component {
                         </li>
                     </ul>
                     <hr />
-                    <ul style={{marginBottom: "0px"}}>
+                    <ul style={{ marginBottom: "0px" }}>
                         <li>
                             <NavLink className="no-bottom-line" exact to="/projects/TwitchMarkovChain">
                                 Try a Twitch chat bot that generates messages based on information it learns dynamically.

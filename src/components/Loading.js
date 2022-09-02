@@ -6,7 +6,7 @@ class Loading extends React.Component {
             <div class="box">
                 Loading...
             </div>
-        )    
+        )
     }
 }
 

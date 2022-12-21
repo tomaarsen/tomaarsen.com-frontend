@@ -67,6 +67,20 @@ class Sidebar extends React.Component {
                         </div>
                     </li>
 
+                    {/* SetFit */}
+                    <li className="list-group-item sidebar-list">
+                        <button className="btn btn-toggle align-items-center rounded collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#setfit-collapse"
+                            aria-expanded="true">
+                            🤗 SetFit
+                        </button>
+                        <div className="collapse show" id="setfit-collapse">
+                            <ul className="btn-toggle-nav list-unstyled fw-normal">
+                                <li><NavLink className="dark" exact to="/projects/setfit">Description</NavLink></li>
+                            </ul>
+                        </div>
+                    </li>
+
                     {/* This Website */}
                     <li className="list-group-item sidebar-list">
                         <button className="btn btn-toggle align-items-center rounded collapsed"

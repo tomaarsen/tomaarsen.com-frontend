@@ -44,8 +44,9 @@ class About extends React.Component {
                     <hr />
                     {/* I'm the author of <NavLink className="no-bottom-line" exact to="/projects/inflex">Inflex</NavLink>, */}
                     {/* and I'm a member of the team behind <a className="no-bottom-line" href="https://github.com/nltk/nltk">NLTK</a>, a well-known NLP Python library boasting over 10k stars on GitHub.<br /> */}
-                    I'm a core maintainer of <a className="no-bottom-line" href="https://github.com/nltk/nltk">NLTK</a>, a well-known NLP Python library boasting over 10k stars on GitHub,
-                    and I've authored dozens of projects including <NavLink className="no-bottom-line" exact to="/projects/inflex">Inflex</NavLink> and <NavLink className="no-bottom-line" exact to="/projects/module_dependencies">module_dependencies</NavLink>.<br />
+                    I'm a core maintainer of <a className="no-bottom-line" href="https://github.com/nltk/nltk">NLTK</a>, a well-known NLP Python library boasting over 11k stars on GitHub.
+                    I also maintain 🤗 <a className="no-bottom-line" href="https://github.com/huggingface/setfit">SetFit</a>, a promising framework for few-shot text classification using Sentence Transformers.
+                    Additionally, I've authored dozens of projects including <NavLink className="no-bottom-line" exact to="/projects/inflex">Inflex</NavLink> and <NavLink className="no-bottom-line" exact to="/projects/module_dependencies">module_dependencies</NavLink>.<br />
                     <hr />
                     I've also developed well over a dozen Twitch.tv bots, which now run in countless chat rooms. Beyond that, I've completed over half a dozen projects on a freelance basis over the years.
                     <hr />

@@ -6,24 +6,6 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import "../../css/about.css";
 
-/*
-class DotsRow extends React.Component {
-    render() {
-        const dots = [...Array(5).keys()].map(i => <img src={i < this.props.nStars ? "dot_filled.svg" : "dot_empty.svg"} alt="Dot" key={i}/>);
-        return (
-            <tr>
-                <td>
-                    {this.props.name}
-                </td>
-                <td style={{textAlign: "right"}}>
-                    {dots}
-                </td>
-            </tr>
-        )
-    }
-}
-*/
-
 class About extends React.Component {
     render() {
         return (
@@ -31,93 +13,21 @@ class About extends React.Component {
                 <div className="about box">
                     <h5>About</h5>
                     <hr />
-                    {/* <ul>
-                        <li><i>Tom Aarsen</i></li>
-                        <li><i>Age</i></li>
-                        <li><i>Country</i></li>
-                    </ul> */}
-                    {/* Hello. I'm Tom Aarsen, a {moment().diff('1999-12-02', 'years')} year old Programming enthusiast */}
                     Hello,<br /><br />
-                    I'm Tom Aarsen - a Master student of the Data Science specialisation in Computing Science, based in the Netherlands.
-                    I'm a Python enthusiast, with an interest in <a className="no-bottom-line" href="https://en.wikipedia.org/wiki/Natural_language_processing">NLP</a> and open sourced development.
-                    {/* (See also <a className="no-bottom-line" href="https://github.com/pulls?q=is%3Apr+author%3Atomaarsen">my PRs</a>) */}
-                    <hr />
-                    {/* I'm the author of <NavLink className="no-bottom-line" exact to="/projects/inflex">Inflex</NavLink>, */}
-                    {/* and I'm a member of the team behind <a className="no-bottom-line" href="https://github.com/nltk/nltk">NLTK</a>, a well-known NLP Python library boasting over 10k stars on GitHub.<br /> */}
-                    I'm a core maintainer of <a className="no-bottom-line" href="https://github.com/nltk/nltk">NLTK</a>, a well-known NLP Python library boasting over 11k stars on GitHub.
-                    I also maintain 🤗 <a className="no-bottom-line" href="https://github.com/huggingface/setfit">SetFit</a>, a promising framework for few-shot text classification using Sentence Transformers.
-                    Additionally, I've authored dozens of projects including <NavLink className="no-bottom-line" exact to="/projects/inflex">Inflex</NavLink> and <NavLink className="no-bottom-line" exact to="/projects/module_dependencies">module_dependencies</NavLink>.<br />
-                    <hr />
-                    I've also developed well over a dozen Twitch.tv bots, which now run in countless chat rooms. Beyond that, I've completed over half a dozen projects on a freelance basis over the years.
+                    I'm Tom Aarsen - a Machine Learning Engineer based in the Netherlands.
+                    I'm best described as a Python enthusiast with a passion for modern <a className="no-bottom-line" href="https://en.wikipedia.org/wiki/Natural_language_processing">NLP</a> and open source development.
                     <hr />
 
-                    Lastly, I've developed websites from scratch (including this one!), and have scored well in several Kaggle competitions (<NavLink className="no-bottom-line" exact to="/projects/Hotel-ID-2022">Hotel ID</NavLink>, <NavLink className="no-bottom-line" exact to="/projects/TTSTextNormalization">TTSTextNormalization</NavLink>).
-                </div>
+                    I'm a core maintainer of <a className="no-bottom-line" href="https://github.com/UKPLab/sentence-transformers">Sentence Transformers</a>, the de-facto Python framework for state-of-the-art sentence and text embeddings,
+                    as well as 🤗 <a className="no-bottom-line" href="https://github.com/huggingface/setfit">SetFit</a>, a promising framework for few-shot text classification using Sentence Transformers.
+                    Furthermore, I maintain <a className="no-bottom-line" href="https://github.com/nltk/nltk">NLTK</a>, a foundational Python library for various NLP tasks.
 
-                <div className="languages box">
-                    <h5>Languages I've used</h5>
-                    {/* <div className="text-muted">A non-complete of languages which I have used over the years.</div> */}
                     <hr />
-                    <ul>
-                        {/* Main */}
-                        <li>Python</li>
-                        {/* Web */}
-                        <li>JavaScript (incl. jQuery, React)</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>PHP</li>
-                        {/* C-likes */}
-                        <li>C</li>
-                        <li>C++</li>
-                        <li>C# (Unity)</li>
-                        <li>Rust</li>
-                        <li>Java</li>
-                        <li>Scala</li>
-                        <li>Perl</li>
-                        {/* Functional */}
-                        <li>Haskell</li>
-                        <li>Prolog</li>
-                        {/* Query Language */}
-                        <li>SQL</li>
-                        {/* Formatting */}
-                        <li>LaTeX</li>
-                        <li>RST</li>
-                        {/* <li>Markdown</li> */}
-                        {/* Proof */}
-                        <li>Coq</li>
-
-                        {/* <li>Assembly</li> */}
-
-                        <li><div className="text-muted">and more...</div></li>
-                    </ul>
-                    {/* Python, HTML, JavaScript (incl. jQuery, React, etc.), PHP, CSS, C, C++, C# (Unity), Java, Scala, Perl, Haskell, Prolog, SQL, LaTeX, RST, Markdown, CoQ, Assembly */}
-                    {/* 
-                    Python: 
-                        numpy, pandas, Flask
-                    
-                    JS:
-                        JQuery, React
-
-                    Bootstrap
-                    
-                    Database:
-                        SQLite, MongoDB */}
-                    {/* Main */}
-                    {/* Python (incl. numpy, pandas, Flask, more),  */}
-                    {/* Web */}
-                    {/* HTML, JavaScript (incl. jQuery, React), CSS, PHP, */}
-                    {/* C-likes */}
-                    {/* Java, C++, C, C# (Unity), Perl,  */}
-                    {/* Functional */}
-                    {/* Haskell, Prolog, */}
-                    {/* Query Language */}
-                    {/* SQL, */}
-                    {/* Formatting */}
-                    {/* Markdown, LaTeX, RST, */}
-                    {/* Proof */}
-                    {/* Coq */}
-                    {/* Extra? */}
-                    {/* XML, JSON, */}
+                    Beyond maintaining projects, I've authored dozens of projects including <NavLink className="no-bottom-line" exact to="/projects/SpanMarkerNER">SpanMarker</NavLink> for
+                    state-of-the-art Named Entity Recognition, <NavLink className="no-bottom-line" exact to="/projects/SpanMarkerNER">attention_sinks</NavLink> for
+                    extending the fluency of pretrained LLMs, <NavLink className="no-bottom-line" exact to="/projects/inflex">Inflex</NavLink>, a
+                    rule-based morphological analyser and generator, and <NavLink className="no-bottom-line" exact to="/projects/module_dependencies">module_dependencies</NavLink> to
+                    gather and plot usage metrics of specific functions from public Python libraries.
                 </div>
 
                 <div className="links box">
@@ -125,12 +35,15 @@ class About extends React.Component {
                     <hr />
                     Find me through one of the links below:
                     <ul style={{ paddingTop: "10px", marginBottom: "0px" }}>
-                        {/* <li>
-                            <i>Email Link</i>
-                        </li> */}
                         <li>
                             <a className="no-bottom-line" href="https://www.github.com/tomaarsen" target="_blank" rel="noopener noreferrer">
                                 My GitHub
+                                <FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a className="no-bottom-line" href="https://huggingface.co/tomaarsen" target="_blank" rel="noopener noreferrer">
+                                My Hugging Face
                                 <FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" />
                             </a>
                         </li>
@@ -151,6 +64,29 @@ class About extends React.Component {
 
                 <div className="recommended box">
                     <h5>Recommended pages on this site</h5>
+                    <hr />
+                    <ul>
+                        <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/usage">
+                                Usage metrics for Sentence Transformers, SetFit and SpanMarker
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/setfit">
+                                Few-Shot Text Classification
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/span_marker">
+                                State-of-the-art Named Entity Recognition
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="no-bottom-line" exact to="/projects/span_marker">
+                                Extend existing LLMs way beyond the original sequence length with constant memory usage, without retraining
+                            </NavLink>
+                        </li>
+                    </ul>
                     <hr />
                     <ul>
                         <li>

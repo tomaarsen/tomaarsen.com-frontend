@@ -53,12 +53,15 @@ const ReadmeCard = ({ name, description, fork, language, stargazers_count, forks
                 return rtf.format(Math.round(elapsed / units[u]), u);
     }
 
-    // Hardcode linking to the parent repository for NLTK and SetFit
+    // Hardcode linking to the parent repository for NLTK, SetFit and SentenceTransformers
     if (name === "nltk") {
         html_url = html_url.replace("tomaarsen", "nltk");
     }
     if (name === "setfit") {
-        html_url = html_url.replace("tomaarsen", "setfit");
+        html_url = html_url.replace("tomaarsen", "huggingface");
+    }
+    if (name === "sentence-transformers") {
+        html_url = html_url.replace("tomaarsen", "UKPLab");
     }
 
     return (

@@ -2,8 +2,7 @@
 .about-grid {
     display: grid;
     
-    grid-template-columns: repeat(3, 23.5rem);
-    /* grid-template-rows: repeat(2, auto); */
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 'about recommended languages'
                          'about recommended links';
 
@@ -18,10 +17,10 @@
 @media only screen and (max-width: 97rem) {
     
     .about-grid {
-        grid-template-columns: repeat(2, 23.5rem);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
         grid-template-areas: 'about recommended'
-                             'links languages';
+                             'about links';
         /* Padding for the scrollbar: */
         padding-right: 1rem; 
     }
@@ -30,12 +29,11 @@
 @media only screen and (max-width: 72rem) {
     
     .about-grid {
-        grid-template-columns: 23.5rem;
+        grid-template-columns: 1fr;
         grid-template-rows: repeat(3, auto);
         grid-template-areas: 'about' 
                              'links'
-                             'recommended'
-                             'languages';
+                             'recommended';
         /* Padding for the scrollbar: */
         padding-right: 1rem; 
     }
@@ -63,22 +61,10 @@
     grid-area: skills;
 }
 
-.about-grid > .languages {
-    grid-area: languages;
-}
-
 .about-grid > .links {
     grid-area: links;
 }
 
 .about-grid > .recommended {
     grid-area: recommended;
-}
-
-.about-grid > .tools {
-    grid-area: tools;
-}
-
-.about-grid > .work {
-    grid-area: work;
 }

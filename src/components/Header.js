@@ -12,6 +12,11 @@ class Header extends React.Component {
                     <div style={{ flexGrow: 1 }}/>
 
                     <code>
+                        <NavLink className="dark" exact to="/projects/usage">
+                            .usage()
+                        </NavLink>
+                    </code>
+                    <code>
                         <NavLink className="dark" exact to="/projects">
                             .projects()
                         </NavLink>

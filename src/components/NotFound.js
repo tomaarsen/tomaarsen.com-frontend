@@ -6,7 +6,7 @@ import "../css/not_found.css";
 class NotFound extends React.Component {
     render() {
         return (
-            <div class="dvd_container">
+            <div className="dvd_container">
                 <NavLink className="dark" to="/home">
                     <div className="box" style={{ width: "max-content" }}>
                         <h4>404 - Not Found!</h4>

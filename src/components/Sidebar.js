@@ -30,23 +30,52 @@ class Sidebar extends React.Component {
                     {/* All projects (cards) */}
                     <li className="list-group-item"><NavLink className="dark" exact to="/projects">Overview</NavLink></li>
 
-                    {/* Inflex */}
+                    {/* Sentence-Transformers */}
                     <li className="list-group-item sidebar-list">
                         <button className="btn btn-toggle align-items-center rounded collapsed"
-                            data-bs-toggle="collapse" data-bs-target="#inflex-collapse"
+                            data-bs-toggle="collapse" data-bs-target="#sentence-transformers-collapse"
                             aria-expanded="true">
-                            Inflex
+                            SentenceTransformers
                         </button>
-                        <div className="collapse show" id="inflex-collapse">
+                        <div className="collapse show" id="sentence-transformers-collapse">
                             <ul className="btn-toggle-nav list-unstyled fw-normal">
-                                {/* <li><a href="try" className="link-dark rounded">Try</a></li> */}
-                                {/* <li><a href="performance" className="link-dark rounded">Performance</a></li> */}
-                                <li><NavLink className="dark" exact to="/projects/inflex">Description</NavLink></li>
-                                {/* <li><NavLink className="dark" exact to="/projects/inflex/paper">Paper</NavLink></li> */}
-                                <li><a href="/projects/inflex/paper/inflex_v2.0.pdf" target="_blank" className="dark rounded">Paper<FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" /></a></li>
-                                {/* <li><NavLink className="dark" exact to="/projects/inflex/paper">Paper</NavLink></li> */}
-                                <li><NavLink className="dark" exact to="/projects/inflex/try">Try</NavLink></li>
-                                <li><NavLink className="dark" exact to="/projects/inflex/performance">Performance</NavLink></li>
+                                <li><NavLink className="dark" exact to="/projects/sentence-transformers">Description</NavLink></li>
+                                <li><a href="https://huggingface.co/models?library=sentence-transformers" target="_blank" rel="noreferrer" className="dark rounded">Models<FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" /></a></li>
+                                <li><a href="https://sbert.net" target="_blank" rel="noreferrer" className="dark rounded">Documentation<FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" /></a></li>
+                                <li><NavLink className="dark" exact to="/projects/usage">Metrics</NavLink></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    {/* SetFit */}
+                    <li className="list-group-item sidebar-list">
+                        <button className="btn btn-toggle align-items-center rounded collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#setfit-collapse"
+                            aria-expanded="true">
+                            🤗 SetFit
+                        </button>
+                        <div className="collapse show" id="setfit-collapse">
+                            <ul className="btn-toggle-nav list-unstyled fw-normal">
+                                <li><NavLink className="dark" exact to="/projects/setfit">Description</NavLink></li>
+                                <li><a href="https://huggingface.co/models?library=setfit" target="_blank" rel="noreferrer" className="dark rounded">Models<FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" /></a></li>
+                                <li><NavLink className="dark" exact to="/projects/usage?package=setfit">Metrics</NavLink></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    {/* SpanMarker */}
+                    <li className="list-group-item sidebar-list">
+                        <button className="btn btn-toggle align-items-center rounded collapsed"
+                            data-bs-toggle="collapse" data-bs-target="#spanmarker-collapse"
+                            aria-expanded="true">
+                            SpanMarker
+                        </button>
+                        <div className="collapse show" id="spanmarker-collapse">
+                            <ul className="btn-toggle-nav list-unstyled fw-normal">
+                                <li><NavLink className="dark" exact to="/projects/SpanMarkerNER">Description</NavLink></li>
+                                <li><a href="https://huggingface.co/models?library=span-marker" target="_blank" rel="noreferrer" className="dark rounded">Models<FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" /></a></li>
+                                <li><a href="https://tomaarsen.github.io/SpanMarkerNER" target="_blank" rel="noreferrer" className="dark rounded">Documentation<FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" /></a></li>
+                                <li><NavLink className="dark" exact to="/projects/usage?package=span_marker">Metrics</NavLink></li>
                             </ul>
                         </div>
                     </li>
@@ -67,16 +96,23 @@ class Sidebar extends React.Component {
                         </div>
                     </li>
 
-                    {/* SetFit */}
+                    {/* Inflex */}
                     <li className="list-group-item sidebar-list">
                         <button className="btn btn-toggle align-items-center rounded collapsed"
-                            data-bs-toggle="collapse" data-bs-target="#setfit-collapse"
+                            data-bs-toggle="collapse" data-bs-target="#inflex-collapse"
                             aria-expanded="true">
-                            🤗 SetFit
+                            Inflex
                         </button>
-                        <div className="collapse show" id="setfit-collapse">
+                        <div className="collapse show" id="inflex-collapse">
                             <ul className="btn-toggle-nav list-unstyled fw-normal">
-                                <li><NavLink className="dark" exact to="/projects/setfit">Description</NavLink></li>
+                                {/* <li><a href="try" className="link-dark rounded">Try</a></li> */}
+                                {/* <li><a href="performance" className="link-dark rounded">Performance</a></li> */}
+                                <li><NavLink className="dark" exact to="/projects/inflex">Description</NavLink></li>
+                                {/* <li><NavLink className="dark" exact to="/projects/inflex/paper">Paper</NavLink></li> */}
+                                <li><a href="/projects/inflex/paper/inflex_v2.0.pdf" target="_blank" className="dark rounded">Paper<FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" /></a></li>
+                                {/* <li><NavLink className="dark" exact to="/projects/inflex/paper">Paper</NavLink></li> */}
+                                <li><NavLink className="dark" exact to="/projects/inflex/try">Try</NavLink></li>
+                                <li><NavLink className="dark" exact to="/projects/inflex/performance">Performance</NavLink></li>
                             </ul>
                         </div>
                     </li>

@@ -19,6 +19,8 @@ import Overview from "./projects/Overview";
 import UsagePlot from "./projects/nltk/UsagePlot";
 import UsageList from "./projects/nltk/UsageList";
 
+import Usage from "./projects/usage/Usage";
+
 import AboutPage from "./about/AboutPage";
 
 import "../css/color.css";
@@ -68,6 +70,7 @@ function Main() {
                             </Route>
                             <Route exact path="/projects/nltk/usage/plot" component={UsagePlot} />
                             <Route exact path="/projects/nltk/usage/list" component={UsageList} />
+                            <Route exact path="/projects/usage" component={Usage} />
 
                             {/* Catch all - redirect to 404 */}
                             <Route path="/404" exact={true} component={NotFound} />

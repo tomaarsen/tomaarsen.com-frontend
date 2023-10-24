@@ -1,0 +1,32 @@
+.usage-wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto min-content;
+    gap: var(--padding);
+}
+
+.usage-sidebar {
+    position: relative;
+    min-width: 18rem;
+}
+
+.usage-chart {
+    height: 100%;
+}
+
+.smoothing-label {
+    margin-bottom: 0;
+}
+
+.smoothing-col-left {
+    display: flex;
+    align-items: center;
+}
+
+.smoothing-col-right {
+    padding-left: 0;
+}
+
+.smoothing-number {
+    width: 5rem;
+}

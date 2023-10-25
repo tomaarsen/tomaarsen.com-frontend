@@ -106,7 +106,7 @@ class Usage extends React.Component {
                             ...prevState.usage,
                             [this.state.package]: {
                                 ...prevState.usage[this.state.package],
-                                [metrics]: response.data,
+                                [metrics]: response,
                             },
                         },
                         loading: false,
@@ -117,7 +117,7 @@ class Usage extends React.Component {
                         usage: {
                             ...prevState.usage,
                             [this.state.package]: {
-                                [metrics]: response.data
+                                [metrics]: response
                             }
                         },
                         loading: false,

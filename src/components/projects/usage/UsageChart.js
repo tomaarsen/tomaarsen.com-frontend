@@ -16,8 +16,7 @@ const options = {
     },
     maintainAspectRatio: false,
     responsive: true,
-    scales: {
-    },
+    scales: {},
     parsing: {
         xAxisKey: "date",
     },
@@ -88,7 +87,7 @@ class UsageChart extends React.Component {
             if (!(metric in rawData)){
                 return;
             }
-            let metricData = rawData[metric];
+            let metricData = rawData[metric].data;
             if (cumulative){
                 metricData = cumulativeFn(metricData);
             }
@@ -184,6 +183,12 @@ class UsageChart extends React.Component {
                     )
                     break;
                 case 'pypi':
+                    if (cumulative){
+                        metricData = metricData.map(element => {
+                            element.downloads += rawData[metric].startDownloads;
+                            return element;
+                        });
+                    }
                     datasets.push(
                         {
                             label: "# of PyPI downloads",
@@ -210,6 +215,9 @@ class UsageChart extends React.Component {
                 grid: {
                     drawOnChartArea: index === 0,
                 }
+            }
+            if (metric === "pypi" && cumulative) {
+                options.scales[metric].beginAtZero = true;
             }
         });
         const data = {

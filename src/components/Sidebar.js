@@ -58,7 +58,7 @@ class Sidebar extends React.Component {
                             <ul className="btn-toggle-nav list-unstyled fw-normal">
                                 <li><NavLink className="dark" exact to="/projects/setfit">Description</NavLink></li>
                                 <li><a href="https://huggingface.co/models?library=setfit" target="_blank" rel="noreferrer" className="dark rounded">Models<FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" /></a></li>
-                                <li><NavLink className="dark" exact to="/projects/usage?package=setfit">Metrics</NavLink></li>
+                                <li><NavLink className="dark" exact to="/projects/usage">Metrics</NavLink></li>
                             </ul>
                         </div>
                     </li>
@@ -75,7 +75,7 @@ class Sidebar extends React.Component {
                                 <li><NavLink className="dark" exact to="/projects/SpanMarkerNER">Description</NavLink></li>
                                 <li><a href="https://huggingface.co/models?library=span-marker" target="_blank" rel="noreferrer" className="dark rounded">Models<FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" /></a></li>
                                 <li><a href="https://tomaarsen.github.io/SpanMarkerNER" target="_blank" rel="noreferrer" className="dark rounded">Documentation<FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" /></a></li>
-                                <li><NavLink className="dark" exact to="/projects/usage?package=span_marker">Metrics</NavLink></li>
+                                <li><NavLink className="dark" exact to="/projects/usage">Metrics</NavLink></li>
                             </ul>
                         </div>
                     </li>

@@ -26,6 +26,12 @@ const options = {
             radius: 0,
         }
     },
+    plugins: {
+        tooltip: {
+            axis: "x",
+            intersect: false,
+        },
+    },
 };
 
 
@@ -100,6 +106,7 @@ class UsageChart extends React.Component {
                             },
                             yAxisID: metric,
                             borderColor: colors[index],
+                            backgroundColor: colors[index],
                         }
                     )
                     break;
@@ -113,6 +120,7 @@ class UsageChart extends React.Component {
                             },
                             yAxisID: metric,
                             borderColor: colors[index],
+                            backgroundColor: colors[index],
                         }
                     )
                     break;
@@ -126,6 +134,7 @@ class UsageChart extends React.Component {
                             },
                             yAxisID: metric,
                             borderColor: colors[index],
+                            backgroundColor: colors[index],
                             borderDash: [5, 5],
                         }
                     )
@@ -138,6 +147,7 @@ class UsageChart extends React.Component {
                             },
                             yAxisID: metric,
                             borderColor: colors[index],
+                            backgroundColor: colors[index],
                         }
                     )
                     break;
@@ -156,6 +166,7 @@ class UsageChart extends React.Component {
                             },
                             yAxisID: metric,
                             borderColor: colors[index],
+                            backgroundColor: colors[index],
                         }
                     )
                     datasets.push(
@@ -167,6 +178,7 @@ class UsageChart extends React.Component {
                             },
                             yAxisID: metric,
                             borderColor: colors[index],
+                            backgroundColor: colors[index],
                             borderDash: [5, 5],
                         }
                     )
@@ -181,6 +193,7 @@ class UsageChart extends React.Component {
                             },
                             yAxisID: metric,
                             borderColor: colors[index],
+                            backgroundColor: colors[index],
                         }
                     )
                     break;

@@ -113,7 +113,7 @@ class Sidebar extends React.Component {
                                 <li><a href="/projects/inflex/paper/inflex_v2.0.pdf" target="_blank" className="dark rounded">Paper<FontAwesomeIcon icon={faExternalLinkAlt} className="external-link-icon" /></a></li>
                                 {/* <li><NavLink className="dark" exact to="/projects/inflex/paper">Paper</NavLink></li> */}
                                 <li><NavLink className="dark" exact to="/projects/inflex/try">Try</NavLink></li>
-                                <li><NavLink className="dark" exact to="/projects/inflex/performance">Performance</NavLink></li>
+                                {/* <li><NavLink className="dark" exact to="/projects/inflex/performance">Performance</NavLink></li> */}
                             </ul>
                         </div>
                     </li>

@@ -215,8 +215,8 @@ class Usage extends React.Component {
 
                             {/* Smoothing */}
                             <label htmlFor="smoothing" className="form-label smoothing-label">Smoothing</label>
-                            <div class="row">
-                                <div class="col smoothing-col-left">
+                            <div className="row">
+                                <div className="col smoothing-col-left">
                                     <input
                                         className="form-range"
                                         type="range"
@@ -229,7 +229,7 @@ class Usage extends React.Component {
                                         onChange={this.handleSmoothing}
                                     />
                                 </div>
-                                <div class="col-auto smoothing-col-right">
+                                <div className="col-auto smoothing-col-right">
                                     <input
                                         className="form-control smoothing-number"
                                         type="number"

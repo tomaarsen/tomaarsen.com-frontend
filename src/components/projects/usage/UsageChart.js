@@ -1,6 +1,9 @@
 import React from "react";
-import { Line } from 'react-chartjs-2';
+import { Line, Chart } from 'react-chartjs-2';
+import zoomPlugin from "chartjs-plugin-zoom";
 import 'chartjs-adapter-moment';
+
+Chart.register(zoomPlugin);
 
 const colors = [
     "rgba(38, 70, 83, 1.0)",
@@ -9,6 +12,10 @@ const colors = [
     "rgba(244, 162, 97, 1.0)",
     "rgba(231, 111, 81, 1.0)",
 ]
+
+const reset = (event) => {
+    event.chart.resetZoom();
+}
 
 const options = {
     animation: {
@@ -30,7 +37,28 @@ const options = {
             axis: "x",
             intersect: false,
         },
+        zoom: {
+            pan: {
+                enabled: true,
+                mode: 'x',
+                modifierKey: "shift",
+            },
+            zoom: {
+                wheel: {
+                    enabled: true,
+                },
+                pinch: {
+                    enabled: true
+                },
+                drag: {
+                    enabled: true,
+
+                },
+                mode: 'x',
+            }
+        },
     },
+    onClick: reset,
 };
 
 
@@ -224,9 +252,7 @@ class UsageChart extends React.Component {
             datasets: datasets,
         };
 
-        return (
-            <Line data={data} options={options} />
-        )
+        return <Line data={data} options={options}/>
     }
 }
 

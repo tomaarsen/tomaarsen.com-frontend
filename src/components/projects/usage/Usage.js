@@ -234,6 +234,9 @@ class Usage extends React.Component {
                                         className="form-control smoothing-number"
                                         type="number"
                                         id="smoothingWeight"
+                                        min="0"
+                                        max="0.99"
+                                        step="0.01"
                                         disabled={this.state.cumulative}
                                         value={this.state.smoothingWeight}
                                         onChange={this.handleSmoothing}

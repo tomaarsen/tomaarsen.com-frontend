@@ -112,10 +112,11 @@ class UsageChart extends React.Component {
         };
         let datasets = [];
         metrics.forEach((metric, index) => {
-            if (!(metric in rawData)){
+            const mappedMetric = metric === "github_prs" ? "github_issues" : metric
+            if (!(mappedMetric in rawData)){
                 return;
             }
-            let metricData = rawData[metric].data;
+            let metricData = rawData[mappedMetric].data;
             if (cumulative){
                 metricData = cumulativeFn(metricData);
             }
@@ -179,36 +180,104 @@ class UsageChart extends React.Component {
                     )
                     break;
                 case 'github_issues':
-                    const issueData = metricData.map((element) => {
-                        element["issues"] = element["opened_issues"] - element["closed_issues"];
-                        element["prs"] = element["opened_prs"] - element["closed_prs"];
-                        return element;
-                    });
-                    datasets.push(
-                        {
-                            label: "# of GitHub issues",
-                            data: issueData,
-                            parsing: {
-                                yAxisKey: "issues",
-                            },
-                            yAxisID: metric,
-                            borderColor: colors[index],
-                            backgroundColor: colors[index],
-                        }
-                    )
-                    datasets.push(
-                        {
-                            label: "# of GitHub PRs",
-                            data: issueData,
-                            parsing: {
-                                yAxisKey: "prs",
-                            },
-                            yAxisID: metric,
-                            borderColor: colors[index],
-                            backgroundColor: colors[index],
-                            borderDash: [5, 5],
-                        }
-                    )
+                    if (cumulative){
+                        const issueData = metricData.map((element) => {
+                            element["issues"] = element["opened_issues"] - element["closed_issues"];
+                            return element;
+                        });
+                        datasets.push(
+                            {
+                                label: "# of open GitHub issues",
+                                data: issueData,
+                                parsing: {
+                                    yAxisKey: "issues",
+                                },
+                                yAxisID: metric,
+                                borderColor: colors[index],
+                                backgroundColor: colors[index],
+                            }
+                        )
+                    } else {
+                        const issueData = metricData.map((element) => {
+                            element["closed_issues"] = -element["closed_issues"];
+                            return element;
+                        });
+                        datasets.push(
+                            {
+                                label: "# of opened GitHub issues",
+                                data: issueData,
+                                parsing: {
+                                    yAxisKey: "opened_issues",
+                                },
+                                yAxisID: metric,
+                                borderColor: colors[index],
+                                backgroundColor: colors[index],
+                            }
+                        )
+                        datasets.push(
+                            {
+                                label: "# of closed GitHub issues",
+                                data: issueData,
+                                parsing: {
+                                    yAxisKey: "closed_issues",
+                                },
+                                yAxisID: metric,
+                                borderColor: colors[index],
+                                backgroundColor: colors[index],
+                                borderDash: [5, 5],
+                            }
+                        )
+                    }
+                    break;
+                case 'github_prs':
+                    if (cumulative){
+                        const issueData = metricData.map((element) => {
+                            element["prs"] = element["opened_prs"] - element["closed_prs"];
+                            return element;
+                        });
+                        datasets.push(
+                            {
+                                label: "# of open GitHub PRs",
+                                data: issueData,
+                                parsing: {
+                                    yAxisKey: "prs",
+                                },
+                                yAxisID: metric,
+                                borderColor: colors[index],
+                                backgroundColor: colors[index],
+                            }
+                        )
+                    } else {
+                        const issueData = metricData.map((element) => {
+                            element["closed_prs"] = -element["closed_prs"];
+                            return element;
+                        });
+                        datasets.push(
+                            {
+                                label: "# of opened GitHub PRs",
+                                data: issueData,
+                                parsing: {
+                                    yAxisKey: "opened_prs",
+                                },
+                                yAxisID: metric,
+                                borderColor: colors[index],
+                                backgroundColor: colors[index],
+                            }
+                        )
+                        datasets.push(
+                            {
+                                label: "# of closed GitHub PRs",
+                                data: issueData,
+                                parsing: {
+                                    yAxisKey: "closed_prs",
+                                },
+                                yAxisID: metric,
+                                borderColor: colors[index],
+                                backgroundColor: colors[index],
+                                borderDash: [5, 5],
+                            }
+                        )
+                    }
                     break;
                 case 'pypi':
                     if (cumulative){

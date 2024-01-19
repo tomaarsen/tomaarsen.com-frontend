@@ -28,11 +28,12 @@ class Usage extends React.Component {
             "span_marker": "SpanMarker",
         }
 
-        this.metrics = ["hf_models", "github_stars", "github_issues", "github_comments", "pypi"]
+        this.metrics = ["hf_models", "github_stars", "github_issues", "github_prs", "github_comments", "pypi"]
         this.metrics_to_pretty = {
             "hf_models": "Hugging Face Hub Models",
             "github_stars": "GitHub Stars",
-            "github_issues": "GitHub Issues & PRs",
+            "github_issues": "GitHub Issues",
+            "github_prs": "GitHub PRs",
             "github_comments": "GitHub Comments",
             "pypi": "PyPI Downloads",
         }
@@ -88,6 +89,10 @@ class Usage extends React.Component {
     }
 
     postUsage(metrics) {
+        if (metrics === "github_prs"){
+            metrics = "github_issues";
+        }
+
         // Check if data is cached
         if (this.state.package in this.state.usage && metrics in this.state.usage[this.state.package]){
             return;

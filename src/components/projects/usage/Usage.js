@@ -16,7 +16,7 @@ class Usage extends React.Component {
             metrics: ["hf_models"],
 
             cumulative: true,
-            smoothingWeight: 0.8,
+            smoothingWeight: 0.95,
 
             usage: {}
         };

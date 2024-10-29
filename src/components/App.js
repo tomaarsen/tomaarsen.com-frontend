@@ -27,16 +27,14 @@ import "../css/color.css";
 import "../css/fonts.css";
 import "../css/App.css";
 
+import { postJson } from "../js/utils";
+
 // Load the expensive Performance tab lazily,
 // allowing it to be built into a separate package
 const Performance = lazy(() => import("./projects/inflex/Performance"));
 
 function Main() {
-    let { isLoading, data } = useQuery(['repoData'], () =>
-        fetch('https://api.github.com/users/tomaarsen/repos?per_page=100').then(res =>
-            res.json()
-        )
-    )
+    let { isLoading, data } = useQuery(['repoData'], () => postJson('/api/repos'))
     if (isLoading) {
         data = [];
     }

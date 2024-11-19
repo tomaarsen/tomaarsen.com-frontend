@@ -77,12 +77,12 @@ class About extends React.Component {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className="no-bottom-line" exact to="/projects/span_marker">
+                            <NavLink className="no-bottom-line" exact to="/projects/SpanMarkerNER">
                                 State-of-the-art Named Entity Recognition
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink className="no-bottom-line" exact to="/projects/span_marker">
+                            <NavLink className="no-bottom-line" exact to="/projects/attention_sinks">
                                 Extend existing LLMs way beyond the original sequence length with constant memory usage, without retraining
                             </NavLink>
                         </li>

@@ -15,7 +15,7 @@ class Usage extends React.Component {
             package: "sentence-transformers",
             metrics: ["hf_models"],
 
-            cumulative: true,
+            cumulative: false,
             smoothingWeight: 0.95,
 
             usage: {}

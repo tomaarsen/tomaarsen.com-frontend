@@ -127,7 +127,7 @@ class UsageChart extends React.Component {
                 case 'hf_models':
                     datasets.push(
                         {
-                            label: "# of Hugging Face Hub models",
+                            label: "# of Hugging Face Hub models (max. 3 models per user counted per day; excludes SetFit)",
                             data: metricData,
                             parsing: {
                                 yAxisKey: "models",
